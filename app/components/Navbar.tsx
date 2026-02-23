@@ -20,18 +20,19 @@ export default function Navbar() {
   const isActive = (path: string) => pathname === path;
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-[6vw] py-[12px] bg-white/88 backdrop-blur-[16px] border-b border-[rgba(214,51,132,0.1)] transition-shadow duration-300 ${scrolled ? 'shadow-[0_4px_30px_rgba(214,51,132,0.15)]' : ''}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-[6vw] py-[6px] bg-white/88 backdrop-blur-[16px] border-b border-[rgba(214,51,132,0.1)] transition-shadow duration-300 ${scrolled ? 'shadow-[0_4px_30px_rgba(214,51,132,0.15)]' : ''}`}>
       <Link href="/" className="flex items-center no-underline">
-        <Image 
-          src="/logo.png" 
-          alt="Favi Craze Logo" 
-          width={50} 
-          height={50}
-          className="object-contain hover:scale-105 transition-transform duration-200"
-          priority
-          unoptimized
-          style={{ filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))' }}
-        />
+        <div className="relative" style={{ width: 80, height: 80 }}>
+          <Image 
+            src="/logo.png" 
+            alt="Fashion Vista Logo" 
+            fill
+            className="object-contain hover:scale-105 transition-transform duration-200"
+            priority
+            unoptimized
+            style={{ filter: 'drop-shadow(0 3px 8px rgba(214,51,132,0.25))' }}
+          />
+        </div>
       </Link>
 
       <ul className="flex gap-[36px] list-none max-md:hidden">

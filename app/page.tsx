@@ -17,42 +17,42 @@ export default function Home() {
   return (
     <div className="animate-[pageIn_0.4s_ease_forwards]">
       {/* Hero Section */}
-      <section className="min-h-[calc(100vh-69px)] grid grid-cols-2 items-center gap-[40px] px-[8vw] py-[60px] relative overflow-hidden max-md:grid-cols-1 max-md:text-center before:content-[''] before:absolute before:top-[-200px] before:right-[-200px] before:w-[700px] before:h-[700px] before:rounded-full before:bg-[radial-gradient(circle,rgba(214,51,132,0.12)_0%,transparent_70%)] before:pointer-events-none after:content-[''] after:absolute after:bottom-[-150px] after:left-[-100px] after:w-[500px] after:h-[500px] after:rounded-full after:bg-[radial-gradient(circle,rgba(244,114,182,0.1)_0%,transparent_70%)] after:pointer-events-none">
+      <section className="min-h-[calc(100vh-64px)] grid grid-cols-2 items-center gap-[40px] px-[8vw] py-[60px] relative overflow-hidden max-md:grid-cols-1 max-md:text-center before:content-[''] before:absolute before:top-[-200px] before:right-[-200px] before:w-[700px] before:h-[700px] before:rounded-full before:bg-[radial-gradient(circle,rgba(214,51,132,0.12)_0%,transparent_70%)] before:pointer-events-none after:content-[''] after:absolute after:bottom-[-150px] after:left-[-100px] after:w-[500px] after:h-[500px] after:rounded-full after:bg-[radial-gradient(circle,rgba(244,114,182,0.1)_0%,transparent_70%)] after:pointer-events-none">
         <div className="relative z-10">
           <div className="inline-flex items-center gap-[8px] bg-[var(--pink-pale)] text-[var(--pink)] px-[16px] py-[6px] rounded-full text-[0.8rem] font-semibold mb-[20px] tracking-[0.05em] uppercase">
             <span className="w-[8px] h-[8px] bg-[var(--pink)] rounded-full animate-pulse"></span>
-            Born in India, Made for You
+            Award-Winning Custom Apparel Brand
           </div>
-          <h1 className="font-['Playfair_Display'] text-[clamp(2.8rem,5vw,4.5rem)] leading-[1.05] text-[var(--dark)] mb-[20px]">
-            Wear Your <em className="text-[var(--pink)] italic">Story,</em><br/>Own Your Style
+          <h1 className="font-['Playfair_Display'] text-[clamp(2.2rem,4.5vw,3.8rem)] leading-[1.1] text-[var(--dark)] mb-[20px]">
+            Turn Your <em className="text-[var(--pink)] italic">Ideas</em> Into<br/>Wearable <em className="text-[var(--pink)] italic">Masterpieces</em>
           </h1>
           <p className="text-[1.1rem] text-[var(--gray)] leading-[1.7] max-w-[460px] mb-[36px] max-md:mx-auto">
-            Favi Craze crafts custom printed apparel that speaks your language — from pop culture to Indian heritage, every design is a piece of you.
+            From a single tee to bulk orders — we bring your designs to life with premium fabrics, vibrant prints, and zero minimum order. Express yourself, your brand, your way.
           </p>
           <div className="flex gap-[16px] flex-wrap max-md:justify-center">
             <Link href="/products" className="bg-[var(--pink)] text-white px-[32px] py-[14px] rounded-full no-underline font-semibold text-[0.95rem] shadow-[0_6px_24px_rgba(214,51,132,0.4)] transition-all duration-200 hover:translate-y-[-2px] hover:shadow-[0_8px_30px_rgba(214,51,132,0.5)]">
-              View Products
+              Explore Products
             </Link>
             <Link href="/contact" className="bg-transparent text-[var(--pink)] px-[32px] py-[14px] rounded-full no-underline font-semibold text-[0.95rem] border-2 border-[var(--pink)] transition-all duration-200 hover:bg-[var(--pink-pale)]">
-              Get Quote
+              Get Free Quote
             </Link>
           </div>
           <div className="flex gap-[32px] mt-[48px] pt-[32px] border-t border-[rgba(214,51,132,0.15)] max-md:justify-center">
             <div className="text-left">
               <div className="font-['Playfair_Display'] text-[2rem] font-black text-[var(--pink)] leading-none">13K+</div>
-              <div className="text-[0.8rem] text-[var(--gray)] mt-[4px]">Orders Fulfilled</div>
+              <div className="text-[0.8rem] text-[var(--gray)] mt-[4px]">Happy Customers</div>
             </div>
             <div className="text-left">
-              <div className="font-['Playfair_Display'] text-[2rem] font-black text-[var(--pink)] leading-none">5+</div>
-              <div className="text-[0.8rem] text-[var(--gray)] mt-[4px]">Reseller Network</div>
+              <div className="font-['Playfair_Display'] text-[2rem] font-black text-[var(--pink)] leading-none">3</div>
+              <div className="text-[0.8rem] text-[var(--gray)] mt-[4px]">Resellers</div>
             </div>
             <div className="text-left">
               <div className="font-['Playfair_Display'] text-[2rem] font-black text-[var(--pink)] leading-none">50+</div>
               <div className="text-[0.8rem] text-[var(--gray)] mt-[4px]">Exhibitions</div>
             </div>
             <div className="text-left">
-              <div className="font-['Playfair_Display'] text-[2rem] font-black text-[var(--pink)] leading-none">7XL</div>
-              <div className="text-[0.8rem] text-[var(--gray)] mt-[4px]">Max Size</div>
+              <div className="font-['Playfair_Display'] text-[2rem] font-black text-[var(--pink)] leading-none">XS-7XL</div>
+              <div className="text-[0.8rem] text-[var(--gray)] mt-[4px]">All Sizes</div>
             </div>
           </div>
         </div>
@@ -142,8 +142,8 @@ export default function Home() {
           {[
             { num: '13K+', label: 'Orders Completed' },
             { num: '50+', label: 'Exhibitions Attended' },
-            { num: '5+', label: 'Prestigious Events as Gifting Partner' },
-            { num: '2024', label: 'Maharashtra Udyog Gaurav Award Winner' },
+            { num: '20+', label: 'Business News Outlets Coverage' },
+            { num: '3', label: 'Resellers Appointed' },
           ].map((ach, i) => (
             <div key={i} className="text-center px-[20px] py-[32px] border border-[rgba(214,51,132,0.2)] rounded-[16px] bg-[rgba(255,255,255,0.03)] backdrop-blur-[4px] transition-colors hover:border-[var(--pink)]">
               <div className="font-['Playfair_Display'] text-[2.8rem] font-black bg-gradient-to-br from-[var(--pink)] to-[var(--pink-light)] bg-clip-text text-transparent leading-none mb-[8px]">

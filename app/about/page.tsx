@@ -19,48 +19,64 @@ export default function About() {
       </section>
 
       {/* Story */}
-      <section className="px-[8vw] py-[90px]">
-        <div className="grid grid-cols-2 gap-[80px] items-center max-md:grid-cols-1">
-          <div className="relative">
-            <div className="w-full aspect-[4/3] bg-gradient-to-br from-[var(--pink-pale)] to-[#fce4ec] rounded-[24px] flex items-center justify-center text-[6rem] shadow-[0_20px_60px_rgba(214,51,132,0.15)]">
-              🏭
-            </div>
-            <div className="absolute bottom-[-20px] right-[-20px] bg-white rounded-[16px] px-[24px] py-[20px] shadow-[0_8px_40px_rgba(214,51,132,0.12)] text-center">
-              <strong className="block text-[1.8rem] text-[var(--pink)] font-['Playfair_Display']">2022</strong>
-              <span className="text-[0.8rem] text-[var(--gray)]">Founded in Mumbai</span>
-            </div>
-          </div>
-
-          <div>
+      <section className="px-[8vw] py-[90px] bg-gradient-to-br from-white to-[#fff5f8]">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="text-center mb-[56px]">
             <div className="inline-flex items-center gap-[8px] text-[0.8rem] font-bold tracking-[0.1em] uppercase text-[var(--pink)] mb-[16px] before:content-[''] before:w-[24px] before:h-[2px] before:bg-[var(--pink)] before:rounded-full">
               Our Story
             </div>
-            <h2 className="font-['Playfair_Display'] text-[clamp(2rem,3.5vw,3rem)] text-[var(--dark)] mb-[16px] leading-[1.2]">
+            <h2 className="font-['Playfair_Display'] text-[clamp(2rem,3.5vw,3rem)] text-[var(--dark)] mb-[20px] leading-[1.2]">
               A Brand Built on <em className="text-[var(--pink)] italic">Passion</em>
             </h2>
-            <p className="text-[var(--gray)] leading-[1.8] mb-[8px]">
-              Favi Craze's journey began with a simple yet powerful promise: provide high-quality, custom-printed apparel. Prathamesh, a hospitality professional with a love for graphic design, channeled years of creative energy into captivating T-shirt designs. Priyam, with six years of marketing expertise, saw the potential and together they built a world where fashion is a canvas for self-expression.
+            <p className="text-[var(--gray)] leading-[1.8] max-w-[800px] mx-auto mb-[16px]">
+              What started as a hobby during the pandemic has blossomed into Maharashtra's most loved custom apparel brand. Prathamesh, coming from a hospitality background with a passion for graphic design, spent years honing his creative skills. When he teamed up with his sister Priyam, who brought 6+ years of marketing experience, they created something special — a brand where fashion becomes a canvas for self-expression.
             </p>
-
-            <ul className="list-none mt-[28px] flex flex-col gap-[16px]">
-              {[
-                { icon: '📅', title: 'March 2022 — Launch', text: 'Started with adult round-neck and collar T-shirts, building a loyal base through social media' },
-                { icon: '🏆', title: '2024 — Award Recognition', text: 'Won Maharashtra Udyog Gaurav 2024 in the Best Customize Printed Apparel Brand category' },
-                { icon: '🌆', title: 'Sept 2025 — Pune Branch', text: 'Expanded operations to Pune to serve the growing western Maharashtra market' },
-                { icon: '🌍', title: 'International Reach', text: 'Successfully delivered orders to UAE and Australia — taking Indian craftsmanship global' },
-              ].map((item, i) => (
-                <li key={i} className="flex gap-[14px] items-start p-[16px] bg-white rounded-[12px] shadow-[0_2px_12px_rgba(0,0,0,0.06)]">
-                  <div className="w-[36px] h-[36px] flex-shrink-0 rounded-[8px] bg-[var(--pink-pale)] flex items-center justify-center text-[1rem]">
-                    {item.icon}
-                  </div>
-                  <div>
-                    <strong className="block text-[0.9rem] mb-[3px]">{item.title}</strong>
-                    <span className="text-[0.85rem] text-[var(--gray)]">{item.text}</span>
-                  </div>
-                </li>
-              ))}
-            </ul>
+            <p className="text-[var(--gray)] leading-[1.8] max-w-[800px] mx-auto">
+              From humble beginnings to being featured in <strong className="text-[var(--pink)]">Express Time Journal</strong> as "Sibling Synergy to Style Empire: Fashion Vista's Success" (August 24, 2024), and serving as the <strong className="text-[var(--pink)]">gifting partner for Sai Tamhankar's interview by Lokmat Filmy</strong> — Favi Craze has become a name synonymous with quality, creativity, and trust.
+            </p>
           </div>
+
+          {/* Timeline */}
+          <div className="relative">
+            {/* Vertical line for desktop */}
+            <div className="hidden md:block absolute left-[50%] top-0 bottom-0 w-[2px] bg-gradient-to-b from-[var(--pink)] via-[var(--pink-light)] to-[var(--pink)]"></div>
+            
+            <div className="space-y-[48px]">
+              {[
+                { icon: '📅', title: 'March 2022 — Launch', text: 'Started with adult round-neck and collar T-shirts, building a loyal base through social media', side: 'left' },
+                { icon: '📰', title: '2024 — Press Recognition', text: 'Featured in Express Time Journal and 20+ business news outlets for our success story', side: 'right' },
+                { icon: '🏆', title: '2024 — Award Winner', text: 'Won Maharashtra Udyog Gaurav 2024 in the Best Customize Printed Apparel Brand category', side: 'left' },
+                { icon: '🤝', title: '3 Resellers Appointed', text: 'Expanded our reach through trusted reseller partnerships across Maharashtra', side: 'right' },
+                { icon: '🌆', title: 'Sept 2025 — Pune Branch', text: 'Opening new branch in Pune to serve the growing western Maharashtra market', side: 'left' },
+                { icon: '🌍', title: 'International Reach', text: 'Successfully delivering to UAE and Australia — taking Indian craftsmanship global', side: 'right' },
+              ].map((item, i) => (
+                <div key={i} className={`relative grid md:grid-cols-2 gap-[24px] items-center ${item.side === 'right' ? 'md:flex-row-reverse' : ''}`}>
+                  {/* Left side content */}
+                  <div className={`${item.side === 'left' ? 'md:text-right md:pr-[48px]' : 'md:order-2 md:pl-[48px]'}`}>
+                    <div className={`bg-white rounded-[20px] p-[28px] shadow-[0_8px_40px_rgba(214,51,132,0.12)] transition-all hover:translate-y-[-4px] hover:shadow-[0_12px_50px_rgba(214,51,132,0.18)] ${item.side === 'left' ? 'md:ml-auto' : 'md:mr-auto'} max-w-[480px]`}>
+                      <div className={`flex items-start gap-[16px] ${item.side === 'left' ? 'md:flex-row-reverse md:text-right' : ''}`}>
+                        <div className="w-[48px] h-[48px] flex-shrink-0 rounded-[12px] bg-gradient-to-br from-[var(--pink-pale)] to-[#fce4ec] flex items-center justify-center text-[1.5rem] shadow-[0_4px_12px_rgba(214,51,132,0.15)]">
+                          {item.icon}
+                        </div>
+                        <div className="flex-1">
+                          <strong className="block text-[1.05rem] mb-[8px] text-[var(--dark)]">{item.title}</strong>
+                          <span className="text-[0.9rem] text-[var(--gray)] leading-[1.6]">{item.text}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Center dot */}
+                  <div className="hidden md:block absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] w-[16px] h-[16px] rounded-full bg-[var(--pink)] border-4 border-white shadow-[0_0_0_4px_rgba(214,51,132,0.2)] z-10"></div>
+
+                  {/* Right side (empty for spacing) */}
+                  <div className={`hidden md:block ${item.side === 'right' ? 'md:order-1' : ''}`}></div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+
         </div>
       </section>
 
@@ -162,9 +178,9 @@ export default function About() {
                 icon: '🎨'
               },
               { 
-                title: 'Trusted by 500+ Brands', 
-                desc: 'From startups to established companies, educational institutions to event organizers — businesses trust us for their branding needs.',
-                icon: '🤝'
+                title: 'Unmatched Variety', 
+                desc: 'From trendy designs to traditional motifs, pop culture to minimalist art — we offer the widest range of customization options in Maharashtra.',
+                icon: '🎭'
               }
             ].map((item, i) => (
               <div key={i} className="bg-white rounded-[20px] p-[32px] shadow-[0_4px_20px_rgba(214,51,132,0.08)] transition-all hover:translate-y-[-4px] hover:shadow-[0_8px_30px_rgba(214,51,132,0.15)]">
@@ -183,9 +199,13 @@ export default function About() {
           <h2 className="font-['Playfair_Display'] text-[clamp(2rem,3.5vw,3rem)] text-[var(--dark)] mb-[24px] leading-[1.2]">
             Meet the <em className="text-[var(--pink)] italic">Dream Team</em>
           </h2>
-          <p className="text-[var(--gray)] leading-[1.8] mb-[48px] max-w-[700px] mx-auto">
+          <p className="text-[var(--gray)] leading-[1.8] mb-[24px] max-w-[700px] mx-auto">
             Behind every great design is a passionate team dedicated to bringing your vision to life. From creative designers to quality control experts, customer service representatives to logistics coordinators — we're a family working together to make you look amazing.
           </p>
+          <div className="inline-flex items-center gap-[8px] bg-[var(--pink-pale)] text-[var(--pink)] px-[20px] py-[8px] rounded-full text-[0.85rem] font-semibold mb-[32px]">
+            <span>🎬</span>
+            <span>Gifting Partner for Sai Tamhankar Interview by Lokmat Filmy</span>
+          </div>
           <div className="bg-gradient-to-br from-[var(--pink-pale)] to-[#fce4ec] rounded-[24px] p-[48px] max-md:p-[32px]">
             <p className="text-[1.1rem] text-[var(--dark)] leading-[1.8] italic mb-[24px]">
               "We started Favi Craze with a simple belief: everyone deserves to wear their story. Whether it's a corporate logo, a family reunion design, or a personal artistic expression — we're here to make it happen with quality, care, and creativity."
