@@ -46,7 +46,8 @@ export default function Footer() {
           <ul className="list-none flex flex-col gap-[10px]">
             <li><a href="mailto:fashionvista2022@gmail.com" className="text-white/50 no-underline text-[0.875rem] hover:text-[var(--pink-light)] transition-colors">fashionvista2022@gmail.com</a></li>
             <li><a href="tel:9321137312" className="text-white/50 no-underline text-[0.875rem] hover:text-[var(--pink-light)] transition-colors">9321137312</a></li>
-            <li><span className="text-white/50 text-[0.875rem]">Mumbai & Pune, MH</span></li>
+            <li><span className="text-white/50 text-[0.875rem]">Venkatesh Vihar, Khar West</span></li>
+            <li><span className="text-white/50 text-[0.875rem]">Mumbai, Maharashtra 400052</span></li>
           </ul>
           <div className="flex gap-[12px] mt-[16px]">
             <a href="https://www.instagram.com/favicraze?igsh=dWJrdG40Z3FnOWpu" target="_blank" rel="noopener noreferrer" className="w-[36px] h-[36px] rounded-full bg-white/10 flex items-center justify-center hover:bg-[var(--pink)] transition-all duration-200" aria-label="Instagram">

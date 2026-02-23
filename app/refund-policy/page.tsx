@@ -96,7 +96,7 @@ export default function RefundPolicy() {
             <p className="text-[var(--dark)] mb-[8px]"><strong>Email:</strong> fashionvista2022@gmail.com</p>
             <p className="text-[var(--dark)] mb-[8px]"><strong>Phone:</strong> 9321137312</p>
             <p className="text-[var(--dark)] mb-[8px]"><strong>WhatsApp:</strong> +91 9321137312</p>
-            <p className="text-[var(--dark)]"><strong>Address:</strong> Mumbai & Pune, Maharashtra, India</p>
+            <p className="text-[var(--dark)]"><strong>Address:</strong> Venkatesh Vihar, Khar West, Mumbai, Maharashtra 400052, India</p>
           </div>
 
           <div className="bg-[#fff5f8] rounded-[16px] p-[24px] mb-[24px] border-l-4 border-[var(--pink)]">

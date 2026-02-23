@@ -90,7 +90,7 @@ export default function TermsOfService() {
           <div className="bg-[var(--pink-pale)] rounded-[16px] p-[24px] mb-[24px]">
             <p className="text-[var(--dark)] mb-[8px]"><strong>Email:</strong> fashionvista2022@gmail.com</p>
             <p className="text-[var(--dark)] mb-[8px]"><strong>Phone:</strong> 9321137312</p>
-            <p className="text-[var(--dark)]"><strong>Address:</strong> Mumbai & Pune, Maharashtra, India</p>
+            <p className="text-[var(--dark)]"><strong>Address:</strong> Venkatesh Vihar, Khar West, Mumbai, Maharashtra 400052, India</p>
           </div>
 
           <div className="mt-[48px] text-center">

@@ -69,7 +69,7 @@ export default function Contact() {
                 { icon: '📞', label: 'Phone', value: '9321137312 / 7304601580' },
                 { icon: '✉️', label: 'Email', value: 'fashionvista2022@gmail.com' },
                 { icon: '📸', label: 'Instagram', value: '@fashionvistaoffical' },
-                { icon: '📍', label: 'Locations', value: 'Mumbai & Pune, Maharashtra' },
+                { icon: '📍', label: 'Address', value: 'Venkatesh Vihar, Khar West, Mumbai, MH 400052' },
               ].map((contact, i) => (
                 <div key={i} className="bg-white rounded-[16px] px-[24px] py-[20px] flex items-center gap-[16px] shadow-[0_8px_40px_rgba(214,51,132,0.12)] transition-transform hover:translate-x-[4px]">
                   <div className="w-[48px] h-[48px] rounded-[12px] bg-[var(--pink-pale)] flex items-center justify-center text-[1.3rem] flex-shrink-0">
