@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 export default function Home() {
@@ -58,19 +59,22 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 flex justify-center max-md:hidden">
-          <div className="relative w-[420px] h-[420px]">
-            <div className="absolute inset-0 rounded-full border-2 border-dashed border-[rgba(214,51,132,0.25)] animate-[spin_20s_linear_infinite]"></div>
-            <div className="absolute inset-[30px] rounded-full border-2 border-[rgba(214,51,132,0.15)] animate-[spin_12s_linear_infinite_reverse]"></div>
-            <div className="absolute inset-[50px] bg-gradient-to-br from-white to-[var(--pink-pale)] rounded-full flex items-center justify-center text-[7rem] shadow-[0_20px_60px_rgba(214,51,132,0.2)]">
-              👕
-            </div>
-            <div className="absolute top-[40px] right-[10px] bg-white rounded-[12px] px-[16px] py-[10px] shadow-[0_8px_40px_rgba(214,51,132,0.12)] text-[0.8rem] font-semibold text-[var(--dark)] animate-[floatY_3s_ease-in-out_infinite]">
+          <div className="relative w-[420px] h-[420px] rounded-[24px] overflow-hidden shadow-[0_20px_60px_rgba(214,51,132,0.25)]">
+            <Image 
+              src="/home-hero.jpeg" 
+              alt="Favi Craze Custom Apparel" 
+              fill
+              className="object-cover"
+              priority
+              unoptimized
+            />
+            <div className="absolute top-[20px] right-[20px] bg-white rounded-[12px] px-[16px] py-[10px] shadow-[0_8px_40px_rgba(214,51,132,0.12)] text-[0.8rem] font-semibold text-[var(--dark)] animate-[floatY_3s_ease-in-out_infinite]">
               🏆 Award Winning
             </div>
-            <div className="absolute bottom-[80px] left-0 bg-white rounded-[12px] px-[16px] py-[10px] shadow-[0_8px_40px_rgba(214,51,132,0.12)] text-[0.8rem] font-semibold text-[var(--dark)] animate-[floatY_3s_ease-in-out_infinite] [animation-delay:1s]">
+            <div className="absolute bottom-[80px] left-[20px] bg-white rounded-[12px] px-[16px] py-[10px] shadow-[0_8px_40px_rgba(214,51,132,0.12)] text-[0.8rem] font-semibold text-[var(--dark)] animate-[floatY_3s_ease-in-out_infinite] [animation-delay:1s]">
               ✨ No MOQ
             </div>
-            <div className="absolute top-[160px] left-[-10px] bg-white rounded-[12px] px-[16px] py-[10px] shadow-[0_8px_40px_rgba(214,51,132,0.12)] text-[0.8rem] font-semibold text-[var(--dark)] animate-[floatY_3s_ease-in-out_infinite] [animation-delay:2s]">
+            <div className="absolute top-[160px] left-[20px] bg-white rounded-[12px] px-[16px] py-[10px] shadow-[0_8px_40px_rgba(214,51,132,0.12)] text-[0.8rem] font-semibold text-[var(--dark)] animate-[floatY_3s_ease-in-out_infinite] [animation-delay:2s]">
               🇮🇳 Made in India
             </div>
           </div>
@@ -138,6 +142,33 @@ export default function Home() {
           </h2>
         </div>
 
+        {/* Award Showcase */}
+        <div className="max-w-[900px] mx-auto mb-[60px]">
+          <div className="grid grid-cols-[350px_1fr] gap-[40px] items-center max-md:grid-cols-1 bg-white/5 backdrop-blur-sm rounded-[20px] p-[32px] border border-white/10">
+            <div className="relative h-[280px] rounded-[16px] overflow-hidden shadow-[0_12px_50px_rgba(214,51,132,0.3)]">
+              <Image 
+                src="/maharashtra-udhyog-winner.jpeg" 
+                alt="Maharashtra Udyog Gaurav Award 2024 Winner" 
+                fill
+                className="object-cover"
+                unoptimized
+              />
+            </div>
+            <div>
+              <div className="inline-flex items-center gap-[8px] bg-[var(--pink)]/20 text-[var(--pink-light)] px-[16px] py-[6px] rounded-full text-[0.75rem] font-bold mb-[16px] tracking-[0.05em] uppercase">
+                <span>🏆</span>
+                <span>Award Winner 2024</span>
+              </div>
+              <h3 className="font-['Playfair_Display'] text-[1.8rem] text-white mb-[12px] leading-[1.2]">
+                Maharashtra Udyog <em className="text-[var(--pink-light)] italic">Gaurav</em>
+              </h3>
+              <p className="text-white/70 leading-[1.7] text-[0.95rem]">
+                Honored with the prestigious Maharashtra Udyog Gaurav 2024 award in the <strong className="text-white">Best Customized Printed Apparel Brand</strong> category. This recognition celebrates our commitment to quality, innovation, and customer satisfaction.
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div className="grid grid-cols-4 gap-[24px] max-md:grid-cols-2">
           {[
             { num: '13K+', label: 'Orders Completed' },
@@ -157,15 +188,28 @@ export default function Home() {
 
       {/* Testimonials */}
       <section className="px-[8vw] py-[90px]">
-        <div className="inline-flex items-center gap-[8px] text-[0.8rem] font-bold tracking-[0.1em] uppercase text-[var(--pink)] mb-[12px] before:content-[''] before:w-[24px] before:h-[2px] before:bg-[var(--pink)] before:rounded-full">
-          Happy Customers
+        <div className="grid grid-cols-2 gap-[60px] items-center mb-[80px] max-md:grid-cols-1">
+          <div>
+            <div className="inline-flex items-center gap-[8px] text-[0.8rem] font-bold tracking-[0.1em] uppercase text-[var(--pink)] mb-[12px] before:content-[''] before:w-[24px] before:h-[2px] before:bg-[var(--pink)] before:rounded-full">
+              Happy Customers
+            </div>
+            <h2 className="font-['Playfair_Display'] text-[clamp(2rem,3.5vw,3rem)] text-[var(--dark)] mb-[16px] leading-[1.2]">
+              What Our <em className="text-[var(--pink)] italic">Customers Say</em>
+            </h2>
+            <p className="text-[var(--gray)] max-w-[520px] leading-[1.7] mb-[24px]">
+              Real reviews from real people who wear Favi Craze with pride. From family reunions to corporate events, we've helped thousands express their unique style.
+            </p>
+          </div>
+          <div className="relative h-[400px] rounded-[24px] overflow-hidden shadow-[0_12px_50px_rgba(214,51,132,0.2)] max-md:h-[300px]">
+            <Image 
+              src="/group-tshirt.jpeg" 
+              alt="Happy Customers wearing Favi Craze Custom T-Shirts" 
+              fill
+              className="object-cover"
+              unoptimized
+            />
+          </div>
         </div>
-        <h2 className="font-['Playfair_Display'] text-[clamp(2rem,3.5vw,3rem)] text-[var(--dark)] mb-[16px] leading-[1.2]">
-          What Our <em className="text-[var(--pink)] italic">Customers Say</em>
-        </h2>
-        <p className="text-[var(--gray)] max-w-[520px] leading-[1.7] mb-[56px]">
-          Real reviews from real people who wear Favi Craze with pride.
-        </p>
 
         <div className="grid grid-cols-3 gap-[24px] max-md:grid-cols-2 max-sm:grid-cols-1">
           {[

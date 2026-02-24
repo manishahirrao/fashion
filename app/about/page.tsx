@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function About() {
   return (
@@ -15,6 +16,43 @@ export default function About() {
           <p className="text-white/70 text-[1.05rem] leading-[1.8]">
             Two siblings. One dream. Favi Craze was born during the pandemic from Prathamesh's creative flair and Priyam's marketing vision — today it's Maharashtra's most loved custom apparel brand.
           </p>
+        </div>
+      </section>
+
+      {/* Recognition Banner */}
+      <section className="px-[8vw] py-[60px] bg-gradient-to-br from-[#fff5f8] to-[var(--pink-pale)]">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="bg-white rounded-[24px] overflow-hidden shadow-[0_12px_50px_rgba(214,51,132,0.15)] grid grid-cols-[400px_1fr] gap-[40px] items-center max-md:grid-cols-1">
+            <div className="relative h-[450px] max-md:h-[350px]">
+              <Image 
+                src="/owner_inspiration.jpeg" 
+                alt="Inspiring Woman of 2025 - E-Mag Recognition" 
+                fill
+                className="object-cover object-top"
+                unoptimized
+              />
+            </div>
+            <div className="p-[48px] max-md:p-[32px]">
+              <div className="inline-flex items-center gap-[8px] bg-[var(--pink-pale)] text-[var(--pink)] px-[16px] py-[6px] rounded-full text-[0.75rem] font-bold mb-[20px] tracking-[0.05em] uppercase">
+                <span>🌟</span>
+                <span>Latest Recognition</span>
+              </div>
+              <h3 className="font-['Playfair_Display'] text-[2rem] text-[var(--dark)] mb-[16px] leading-[1.2]">
+                Inspiring Woman of <em className="text-[var(--pink)] italic">2025</em>
+              </h3>
+              <p className="text-[var(--gray)] leading-[1.8] mb-[24px]">
+                Thrilled to share that I've been recognized as an <strong>Inspiring Woman of 2025</strong> by E-Mag! This recognition is a testament to the incredible journey we've built together at Favi Craze. Huge thanks to everyone who's supported me on this journey 🙏
+              </p>
+              <a 
+                href="https://www.e-mag.in/blog?id=kKxk" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block bg-[var(--pink)] text-white px-[28px] py-[12px] rounded-full no-underline font-semibold text-[0.9rem] shadow-[0_6px_24px_rgba(214,51,132,0.4)] transition-all duration-200 hover:translate-y-[-2px] hover:shadow-[0_8px_30px_rgba(214,51,132,0.5)]"
+              >
+                Read Full Blog →
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -195,31 +233,68 @@ export default function About() {
 
       {/* Team Section */}
       <section className="px-[8vw] py-[90px]">
-        <div className="max-w-[900px] mx-auto text-center">
-          <h2 className="font-['Playfair_Display'] text-[clamp(2rem,3.5vw,3rem)] text-[var(--dark)] mb-[24px] leading-[1.2]">
-            Meet the <em className="text-[var(--pink)] italic">Dream Team</em>
-          </h2>
-          <p className="text-[var(--gray)] leading-[1.8] mb-[24px] max-w-[700px] mx-auto">
-            Behind every great design is a passionate team dedicated to bringing your vision to life. From creative designers to quality control experts, customer service representatives to logistics coordinators — we're a family working together to make you look amazing.
-          </p>
-          <div className="inline-flex items-center gap-[8px] bg-[var(--pink-pale)] text-[var(--pink)] px-[20px] py-[8px] rounded-full text-[0.85rem] font-semibold mb-[32px]">
-            <span>🎬</span>
-            <span>Gifting Partner for Sai Tamhankar Interview by Lokmat Filmy</span>
+        <div className="max-w-[1100px] mx-auto">
+          <div className="text-center mb-[56px]">
+            <h2 className="font-['Playfair_Display'] text-[clamp(2rem,3.5vw,3rem)] text-[var(--dark)] mb-[24px] leading-[1.2]">
+              Meet the <em className="text-[var(--pink)] italic">Dream Team</em>
+            </h2>
+            <p className="text-[var(--gray)] leading-[1.8] mb-[24px] max-w-[700px] mx-auto">
+              Behind every great design is a passionate team dedicated to bringing your vision to life. From creative designers to quality control experts, customer service representatives to logistics coordinators — we're a family working together to make you look amazing.
+            </p>
+            <div className="inline-flex items-center gap-[8px] bg-[var(--pink-pale)] text-[var(--pink)] px-[20px] py-[8px] rounded-full text-[0.85rem] font-semibold mb-[32px]">
+              <span>🎬</span>
+              <span>Gifting Partner for Sai Tamhankar Interview by Lokmat Filmy</span>
+            </div>
           </div>
-          <div className="bg-gradient-to-br from-[var(--pink-pale)] to-[#fce4ec] rounded-[24px] p-[48px] max-md:p-[32px]">
-            <p className="text-[1.1rem] text-[var(--dark)] leading-[1.8] italic mb-[24px]">
+
+          {/* Founders */}
+          <div className="bg-gradient-to-br from-[var(--pink-pale)] to-[#fce4ec] rounded-[24px] p-[48px] max-md:p-[32px] mb-[48px]">
+            <h3 className="font-['Playfair_Display'] text-[1.8rem] text-[var(--dark)] mb-[24px] text-center">
+              The <em className="text-[var(--pink)] italic">Founders</em>
+            </h3>
+            <p className="text-[var(--gray)] leading-[1.8] mb-[28px] text-center max-w-[700px] mx-auto italic">
               "We started Favi Craze with a simple belief: everyone deserves to wear their story. Whether it's a corporate logo, a family reunion design, or a personal artistic expression — we're here to make it happen with quality, care, and creativity."
             </p>
-            <div className="flex items-center justify-center gap-[32px] flex-wrap">
-              <div>
+            <div className="flex items-center justify-center gap-[40px] flex-wrap">
+              <div className="text-center">
+                <div className="w-[80px] h-[80px] mx-auto mb-[12px] rounded-full bg-gradient-to-br from-[var(--pink)] to-[var(--pink-light)] flex items-center justify-center text-[2rem] text-white shadow-[0_8px_24px_rgba(214,51,132,0.3)]">
+                  P
+                </div>
                 <div className="font-bold text-[var(--dark)]">Prathamesh Ranjan Talpade</div>
                 <div className="text-[var(--pink)] text-[0.9rem]">Founder & Creative Director</div>
+                <div className="text-[0.8rem] text-[var(--gray)] mt-[4px]">Hospitality + Graphic Design</div>
               </div>
-              <div className="w-[2px] h-[40px] bg-[var(--pink)] max-sm:hidden"></div>
-              <div>
+              <div className="w-[2px] h-[80px] bg-[var(--pink)] max-sm:hidden"></div>
+              <div className="text-center">
+                <div className="w-[80px] h-[80px] mx-auto mb-[12px] rounded-full bg-gradient-to-br from-[var(--pink)] to-[var(--pink-light)] flex items-center justify-center text-[2rem] text-white shadow-[0_8px_24px_rgba(214,51,132,0.3)]">
+                  P
+                </div>
                 <div className="font-bold text-[var(--dark)]">Priyam Talpade-Mandrekar</div>
                 <div className="text-[var(--pink)] text-[0.9rem]">Co-Founder & Marketing Head</div>
+                <div className="text-[0.8rem] text-[var(--gray)] mt-[4px]">6+ Years Marketing Experience</div>
               </div>
+            </div>
+          </div>
+
+          {/* Core Team */}
+          <div>
+            <h3 className="font-['Playfair_Display'] text-[1.8rem] text-[var(--dark)] mb-[32px] text-center">
+              Our <em className="text-[var(--pink)] italic">Core Team</em>
+            </h3>
+            <div className="grid grid-cols-3 gap-[32px] max-md:grid-cols-2 max-sm:grid-cols-1">
+              {[
+                { name: 'Sampada M Kulkarni', role: 'Partner - Pune Branch', initial: 'S' },
+                { name: 'Niraj Gaikwad', role: 'Creative Head', initial: 'N' },
+                { name: 'Suraj Gaikwad', role: 'Social Media Marketing Head', initial: 'S' },
+              ].map((member, i) => (
+                <div key={i} className="bg-white rounded-[20px] p-[32px] text-center shadow-[0_8px_40px_rgba(214,51,132,0.12)] transition-all hover:translate-y-[-4px] hover:shadow-[0_12px_50px_rgba(214,51,132,0.18)]">
+                  <div className="w-[70px] h-[70px] mx-auto mb-[16px] rounded-full bg-gradient-to-br from-[var(--pink-pale)] to-[#fce4ec] flex items-center justify-center text-[1.8rem] text-[var(--pink)] font-bold shadow-[0_4px_16px_rgba(214,51,132,0.2)]">
+                    {member.initial}
+                  </div>
+                  <div className="font-bold text-[1.05rem] text-[var(--dark)] mb-[6px]">{member.name}</div>
+                  <div className="text-[var(--pink)] text-[0.9rem]">{member.role}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
