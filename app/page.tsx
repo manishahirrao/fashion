@@ -99,6 +99,39 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Products Sliding Banner */}
+      <section className="relative h-[500px] overflow-hidden max-md:h-[400px]">
+        <div className="absolute inset-0">
+          <Image 
+            src="/group-tshirt.jpeg" 
+            alt="Favi Craze Custom Products" 
+            fill
+            className="object-cover"
+            priority
+            unoptimized
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+        </div>
+        <div className="relative z-10 h-full flex items-center px-[8vw]">
+          <div className="max-w-[600px]">
+            <h2 className="font-['Playfair_Display'] text-[clamp(2.5rem,4vw,4rem)] text-white mb-[20px] leading-[1.1]">
+              Discover Our <em className="text-[var(--pink-light)] italic">Collection</em>
+            </h2>
+            <p className="text-white/90 text-[1.1rem] leading-[1.7] mb-[32px]">
+              From trendy t-shirts to corporate gifting solutions — explore our wide range of customizable apparel that brings your vision to life.
+            </p>
+            <div className="flex gap-[16px] flex-wrap">
+              <Link href="/about" className="bg-white text-[var(--pink)] px-[32px] py-[14px] rounded-full no-underline font-semibold text-[0.95rem] shadow-[0_6px_24px_rgba(255,255,255,0.3)] transition-all duration-200 hover:translate-y-[-2px] hover:shadow-[0_8px_30px_rgba(255,255,255,0.4)]">
+                About Us
+              </Link>
+              <Link href="/products" className="bg-[var(--pink)] text-white px-[32px] py-[14px] rounded-full no-underline font-semibold text-[0.95rem] shadow-[0_6px_24px_rgba(214,51,132,0.4)] transition-all duration-200 hover:translate-y-[-2px] hover:shadow-[0_8px_30px_rgba(214,51,132,0.5)]">
+                Product Gallery
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="px-[8vw] py-[90px]">
         <div className="inline-flex items-center gap-[8px] text-[0.8rem] font-bold tracking-[0.1em] uppercase text-[var(--pink)] mb-[12px] before:content-[''] before:w-[24px] before:h-[2px] before:bg-[var(--pink)] before:rounded-full">
@@ -336,6 +369,146 @@ export default function Home() {
                 </p>
               </details>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Become a Reseller Section */}
+      <section className="px-[8vw] py-[90px] bg-gradient-to-br from-[#fff5f8] to-[var(--pink-pale)]">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="grid grid-cols-2 gap-[60px] items-center max-md:grid-cols-1">
+            <div>
+              <div className="inline-flex items-center gap-[8px] bg-white text-[var(--pink)] px-[16px] py-[6px] rounded-full text-[0.75rem] font-bold mb-[20px] tracking-[0.05em] uppercase shadow-sm">
+                <span>🤝</span>
+                <span>Partnership Opportunity</span>
+              </div>
+              <h2 className="font-['Playfair_Display'] text-[clamp(2rem,3.5vw,3rem)] text-[var(--dark)] mb-[20px] leading-[1.2]">
+                Become a <em className="text-[var(--pink)] italic">Reseller</em>
+              </h2>
+              <p className="text-[var(--gray)] leading-[1.8] mb-[24px]">
+                Join India's fastest-growing custom apparel brand and build your own profitable business. As a Favi Craze reseller, you'll get exclusive access to premium products, competitive pricing, and dedicated support to help you succeed.
+              </p>
+              <ul className="space-y-[12px] mb-[32px]">
+                {[
+                  'Zero investment required to start',
+                  'Attractive profit margins on every order',
+                  'Access to our complete product catalog',
+                  'Marketing materials and design support',
+                  'Dedicated reseller dashboard',
+                  'Priority customer service',
+                ].map((benefit, i) => (
+                  <li key={i} className="flex items-start gap-[12px] text-[var(--gray)]">
+                    <span className="text-[var(--pink)] text-[1.2rem] flex-shrink-0">✓</span>
+                    <span>{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+              <a 
+                href="https://wa.me/919321137312?text=Hi!%20I%20want%20to%20become%20a%20Favi%20Craze%20reseller.%20Please%20share%20more%20details." 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block bg-[var(--pink)] text-white px-[32px] py-[14px] rounded-full no-underline font-semibold text-[0.95rem] shadow-[0_6px_24px_rgba(214,51,132,0.4)] transition-all duration-200 hover:translate-y-[-2px] hover:shadow-[0_8px_30px_rgba(214,51,132,0.5)]"
+              >
+                Join as Reseller →
+              </a>
+            </div>
+            <div className="bg-white rounded-[24px] p-[40px] shadow-[0_12px_50px_rgba(214,51,132,0.15)]">
+              <div className="text-center mb-[32px]">
+                <div className="w-[80px] h-[80px] mx-auto mb-[16px] rounded-full bg-gradient-to-br from-[var(--pink)] to-[var(--pink-light)] flex items-center justify-center text-[2.5rem] text-white shadow-[0_8px_24px_rgba(214,51,132,0.3)]">
+                  💼
+                </div>
+                <h3 className="font-['Playfair_Display'] text-[1.6rem] text-[var(--dark)] mb-[8px]">Start Your Journey</h3>
+                <p className="text-[var(--gray)] text-[0.9rem]">Join 3+ successful resellers across Maharashtra</p>
+              </div>
+              <div className="space-y-[20px]">
+                {[
+                  { step: '01', title: 'Apply', desc: 'Fill out a simple application form' },
+                  { step: '02', title: 'Get Approved', desc: 'Receive your reseller credentials' },
+                  { step: '03', title: 'Start Selling', desc: 'Begin earning from day one' },
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-[16px] items-start">
+                    <div className="w-[40px] h-[40px] flex-shrink-0 rounded-full bg-[var(--pink-pale)] flex items-center justify-center text-[var(--pink)] font-bold text-[0.85rem]">
+                      {item.step}
+                    </div>
+                    <div>
+                      <div className="font-bold text-[var(--dark)] mb-[4px]">{item.title}</div>
+                      <div className="text-[var(--gray)] text-[0.85rem]">{item.desc}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* WhatsApp Affiliate Partner Program */}
+      <section className="px-[8vw] py-[90px]">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="grid grid-cols-2 gap-[60px] items-center max-md:grid-cols-1">
+            <div className="bg-gradient-to-br from-[#25D366] to-[#128C7E] rounded-[24px] p-[48px] text-white relative overflow-hidden max-md:order-2">
+              <div className="absolute top-[-50px] right-[-50px] w-[200px] h-[200px] rounded-full bg-white/10 blur-[60px]"></div>
+              <div className="relative z-10">
+                <div className="w-[70px] h-[70px] mb-[24px] rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                  <svg viewBox="0 0 24 24" className="w-[40px] h-[40px] fill-white">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 21.5c-1.864 0-3.605-.561-5.055-1.527l-3.611.968.977-3.638c-1.004-1.454-1.589-3.217-1.589-5.115 0-5.238 4.262-9.5 9.5-9.5s9.5 4.262 9.5 9.5-4.262 9.5-9.5 9.5zm5.139-6.857c-.281-.141-1.664-.821-1.922-.915-.258-.094-.446-.141-.633.141s-.727.915-.891 1.102c-.164.188-.328.211-.609.07-.281-.141-1.186-.437-2.258-1.393-.835-.744-1.399-1.663-1.563-1.945-.164-.281-.017-.433.123-.573.126-.126.281-.328.422-.492.141-.164.188-.281.281-.469.094-.188.047-.352-.023-.492-.07-.141-.633-1.524-.867-2.086-.228-.547-.459-.473-.633-.481-.164-.008-.352-.008-.539-.008s-.492.07-.75.352c-.258.281-.984.961-.984 2.344s1.008 2.719 1.148 2.906c.141.188 1.984 3.028 4.805 4.242.672.289 1.195.461 1.602.59.675.214 1.289.184 1.773.112.54-.08 1.664-.68 1.898-1.336.234-.656.234-1.219.164-1.336-.07-.117-.258-.188-.539-.328z"/>
+                  </svg>
+                </div>
+                <h3 className="font-['Playfair_Display'] text-[2rem] mb-[16px] leading-[1.2]">
+                  WhatsApp Affiliate <em className="italic">Partner</em>
+                </h3>
+                <p className="text-white/90 leading-[1.7] mb-[24px]">
+                  Earn commissions by promoting Favi Craze products through WhatsApp. Perfect for influencers, content creators, and anyone with a strong social network.
+                </p>
+                <div className="space-y-[12px]">
+                  {[
+                    'Earn up to 15% commission per sale',
+                    'Unique referral links for tracking',
+                    'Weekly payouts via UPI/Bank transfer',
+                    'Exclusive promotional content',
+                    'Real-time dashboard to track earnings',
+                  ].map((benefit, i) => (
+                    <div key={i} className="flex items-start gap-[12px]">
+                      <span className="text-white text-[1.2rem] flex-shrink-0">✓</span>
+                      <span className="text-white/90 text-[0.95rem]">{benefit}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className="max-md:order-1">
+              <div className="inline-flex items-center gap-[8px] bg-[#25D366]/10 text-[#128C7E] px-[16px] py-[6px] rounded-full text-[0.75rem] font-bold mb-[20px] tracking-[0.05em] uppercase">
+                <span>💰</span>
+                <span>Earn While You Share</span>
+              </div>
+              <h2 className="font-['Playfair_Display'] text-[clamp(2rem,3.5vw,3rem)] text-[var(--dark)] mb-[20px] leading-[1.2]">
+                Turn Your Network Into <em className="text-[var(--pink)] italic">Income</em>
+              </h2>
+              <p className="text-[var(--gray)] leading-[1.8] mb-[32px]">
+                Love our products? Share them with your friends, family, and followers on WhatsApp and earn generous commissions on every sale. No inventory, no investment — just share and earn!
+              </p>
+              <div className="bg-[var(--pink-pale)] rounded-[16px] p-[24px] mb-[32px]">
+                <div className="font-bold text-[var(--dark)] mb-[12px]">How It Works:</div>
+                <ol className="space-y-[8px] list-decimal list-inside text-[var(--gray)]">
+                  <li>Sign up as a WhatsApp Affiliate Partner</li>
+                  <li>Get your unique referral link and promo materials</li>
+                  <li>Share products with your WhatsApp contacts</li>
+                  <li>Earn commission when someone buys through your link</li>
+                  <li>Receive weekly payouts directly to your account</li>
+                </ol>
+              </div>
+              <a 
+                href="https://wa.me/919321137312?text=Hi!%20I%20want%20to%20join%20the%20WhatsApp%20Affiliate%20Partner%20Program.%20Please%20share%20details." 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-[10px] bg-[#25D366] text-white px-[32px] py-[14px] rounded-full no-underline font-semibold text-[0.95rem] shadow-[0_6px_24px_rgba(37,211,102,0.4)] transition-all duration-200 hover:translate-y-[-2px] hover:shadow-[0_8px_30px_rgba(37,211,102,0.5)]"
+              >
+                <svg viewBox="0 0 24 24" className="w-[20px] h-[20px] fill-white">
+                  <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 21.5c-1.864 0-3.605-.561-5.055-1.527l-3.611.968.977-3.638c-1.004-1.454-1.589-3.217-1.589-5.115 0-5.238 4.262-9.5 9.5-9.5s9.5 4.262 9.5 9.5-4.262 9.5-9.5 9.5z"/>
+                </svg>
+                Join Affiliate Program
+              </a>
+            </div>
           </div>
         </div>
       </section>
