@@ -1,36 +1,247 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
-type Category = 'all' | 'tshirts' | 'hoodies' | 'accessories' | 'corporate';
+type Category = 'all' | 'printed-adults' | 'handpainted' | 'kids' | 'couple' | 'other';
 
-interface Product {
+// Grouped product structure (source data)
+interface GroupedProduct {
   name: string;
   desc: string;
   category: Category;
   badge?: string;
-  emoji: string;
+  images: string[];
 }
 
-const products: Product[] = [
-  { name: 'Custom Printed T-Shirt', desc: 'Round neck, premium 180 GSM cotton. DTF / DTG printing. Available in XS–7XL.', category: 'tshirts', badge: 'Bestseller', emoji: '👕' },
-  { name: 'Hand Painted T-Shirt', desc: 'Unique, one-of-a-kind hand-painted designs by skilled artists. Each piece is truly original.', category: 'tshirts', emoji: '🎨' },
-  { name: 'Printed Hoodie', desc: 'Cozy fleece hoodie with full-colour DTF print. Perfect for winters and casual wear.', category: 'hoodies', badge: 'New', emoji: '🧥' },
-  { name: 'Corporate Polo Shirt', desc: 'Professional polo shirts with your company logo. Embroidery or print options available.', category: 'corporate', emoji: '👔' },
-  { name: 'Custom Printed Cap', desc: 'Embroidered or printed caps for individuals, teams, events and corporate gifting.', category: 'accessories', emoji: '🧢' },
-  { name: 'Customized Bag & Pouch', desc: 'Tote bags, pouches, and carry bags with your custom artwork or brand logo.', category: 'accessories', badge: 'Popular', emoji: '👜' },
-  { name: 'Printed Apron', desc: 'Custom aprons for chefs, caterers, and home cooks. Great for gifting too.', category: 'accessories', emoji: '🍽️' },
-  { name: 'Night Dress / Pyjama Set', desc: 'Soft, comfortable night wear with fun custom prints. Perfect for family gifting sets.', category: 'tshirts', emoji: '🌙' },
-  { name: 'Corporate Gifting Bundle', desc: 'Curated gifting packages for events, product launches, and employee recognition.', category: 'corporate', emoji: '🏢' },
+// Individual product structure (for rendering)
+interface IndividualProduct {
+  id: string;
+  imagePath: string;
+  categoryName: string;
+  categoryDescription: string;
+  category: Category;
+  badge?: string;
+  displayName: string;
+}
+
+const groupedProducts: GroupedProduct[] = [
+  // Round Neck T-shirts
+  { 
+    name: 'Round Neck T-shirts', 
+    desc: 'Classic round neck tees with custom DTF/DTG printing. Premium 180 GSM cotton, XS–7XL.', 
+    category: 'printed-adults', 
+    badge: 'Bestseller', 
+    images: [
+      '/round-neck-tshirt (1).jpeg',
+      '/round-neck-tshirt (2).jpeg',
+      '/round-neck-tshirt (3).jpeg',
+      '/round-neck-tshirt (4).jpeg',
+      '/round-neck-tshirt (5).jpeg',
+      '/round-neck-tshirt (6).jpeg',
+      '/round-neck-tshirt (7).jpeg',
+      '/round-neck-tshirt (8).jpeg',
+      '/round-neck-tshirt (9).jpeg',
+      '/round-neck-tshirt (10).jpeg',
+      '/round-neck-tshirt (11).jpeg',
+      '/round-neck-tshirt (12).jpeg',
+      '/round-neck-tshirt (13).jpeg',
+      '/round-neck-tshirt (14).jpeg',
+      '/round-neck-tshirt (15).jpeg',
+      '/round-neck-tshirt (16).jpeg',
+    ]
+  },
+  
+  // Collar T-shirts
+  { 
+    name: 'Collar T-shirts', 
+    desc: 'Professional polo-style collar tees perfect for corporate wear and casual outings.', 
+    category: 'printed-adults', 
+    badge: 'Popular',
+    images: [
+      '/collar-tshirt (1).jpeg',
+      '/collar-tshirt (2).jpeg',
+      '/collar-tshirt (3).jpeg',
+      '/collar-tshirt (4).jpeg',
+      '/collar-tshirt (5).jpeg',
+      '/collar-tshirt (6).jpeg',
+      '/collar-tshirt (7).jpeg',
+      '/collar-tshirt (8).jpeg',
+      '/collar-tshirt (9).jpeg',
+      '/collar-shirt (1).jpeg',
+      '/collar-shirt (2).jpeg',
+    ]
+  },
+  
+  // Nylon T-shirts
+  { 
+    name: 'Nylon T-shirts', 
+    desc: 'Lightweight, quick-dry nylon tees perfect for sports, gym, and outdoor activities.', 
+    category: 'printed-adults', 
+    images: [
+      '/nylon-tshirt (1).jpeg',
+      '/nylon-tshirt (2).jpeg',
+    ]
+  },
+  
+  // Handpainted T-shirts
+  { 
+    name: 'Handpainted T-shirts', 
+    desc: 'Unique hand-painted designs on premium tees. Each piece is one-of-a-kind art for kids & adults.', 
+    category: 'handpainted', 
+    badge: 'Exclusive', 
+    images: [
+      '/handpainted-tshirt (1).jpeg',
+      '/handpainted-tshirt (2).jpeg',
+      '/handpainted-tshirt (3).jpeg',
+      '/handpainted-tshirt (4).jpeg',
+      '/handpainted-tshirt (5).jpeg',
+      '/handpainted-tshirt (6).jpeg',
+      '/handpainted-tshirt (7).jpeg',
+      '/handpainted-tshirt (8).jpeg',
+    ]
+  },
+  
+  // Kids Wear
+  { 
+    name: 'Kids Wear Collection', 
+    desc: 'Soft, comfortable tees and hoodies for kids with fun custom prints. Round neck, collar, and hoodie styles available.', 
+    category: 'kids', 
+    badge: 'New',
+    images: [
+      '/kids-tshirt (1).jpeg',
+      '/kids-tshirt (2).jpeg',
+      '/kids-tshirt (3).jpeg',
+      '/kids-tshirt (4).jpeg',
+      '/kids-tshirt (5).jpeg',
+      '/kids-tshirt (6).jpeg',
+      '/kids-tshirt (7).jpeg',
+      '/kids-tshirt (8).jpeg',
+      '/kids-tshirt (9).jpeg',
+      '/kids-tshirt (10).jpeg',
+      '/kids-tshirt (11).jpeg',
+      '/kids-tshirt (12).jpeg',
+      '/kids-tshirt (13).jpeg',
+      '/kids-tshirt (14).jpeg',
+    ]
+  },
+  
+  // Couple T-shirts
+  { 
+    name: 'Couple T-shirts', 
+    desc: 'Matching couple tees with creative designs. Perfect for anniversaries, dates, and special occasions.', 
+    category: 'couple', 
+    badge: 'Trending',
+    images: [
+      '/couple-tshirt (1).jpeg',
+      '/couple-tshirt (2).jpeg',
+      '/couple-tshirt (3).jpeg',
+      '/couple-tshirt (4).jpeg',
+      '/couple-tshirt (5).jpeg',
+    ]
+  },
+  
+  // Group T-shirts
+  { 
+    name: 'Group T-shirts', 
+    desc: 'Coordinated group tees perfect for teams, events, family reunions, and corporate gatherings.', 
+    category: 'other', 
+    images: [
+      '/family-group.jpeg',
+    ]
+  },
+  
+  // Custom Caps
+  { 
+    name: 'Custom Caps', 
+    desc: 'Personalized caps with custom embroidery and printing. Perfect for corporate branding, events, and casual wear.', 
+    category: 'other', 
+    badge: 'New',
+    images: [
+      '/cap-eith-tshirt.jpeg',
+    ]
+  },
+  
+  // Custom Pouches
+  { 
+    name: 'Custom Pouches', 
+    desc: 'Personalized pouches and bags with custom printing. Perfect for gifts, events, and promotional items.', 
+    category: 'other', 
+    images: [
+      '/pouches (1).jpeg',
+      '/pouches (2).jpeg',
+      '/pouches (3).jpeg',
+      '/pouches-1 (1).JPG',
+      '/pouches-1 (2).JPG',
+      '/pouches-1 (3).JPG',
+      '/pouches-2 (1).JPG',
+      '/pouches-2 (2).JPG',
+      '/pouches-3.JPG',
+      '/pouches.JPG',
+      '/poches-with-pocket perfume (1).JPG',
+      '/poches-with-pocket perfume (2).JPG',
+      '/poches-with-pocket perfume (3).JPG',
+    ]
+  },
+  
+  // Shopping Bags
+  { 
+    name: 'Shopping Bags', 
+    desc: 'Custom printed shopping bags for retail, events, and promotional purposes. Durable and eco-friendly options.', 
+    category: 'other', 
+    images: [
+      '/shopping-bags (1).jpeg',
+      '/shopping-bags (2).jpeg',
+    ]
+  },
 ];
+
+// Flatten grouped products into individual product cards
+function flattenProducts(groupedProducts: GroupedProduct[]): IndividualProduct[] {
+  const flattened: IndividualProduct[] = [];
+  
+  groupedProducts.forEach((group) => {
+    // Skip if images array is empty
+    if (!group.images || group.images.length === 0) {
+      console.warn(`Product group "${group.name}" has no images`);
+      return;
+    }
+    
+    group.images.forEach((imagePath, index) => {
+      // Skip invalid image paths
+      if (!imagePath || typeof imagePath !== 'string' || !imagePath.startsWith('/')) {
+        console.warn(`Invalid image path in "${group.name}": ${imagePath}`);
+        return;
+      }
+      
+      // Extract filename from path for display
+      const filename = imagePath.split('/').pop()?.replace(/\.(jpeg|jpg|png|webp)$/i, '') || '';
+      
+      flattened.push({
+        id: `${group.category}-${group.name.toLowerCase().replace(/\s+/g, '-')}-${index}`,
+        imagePath: imagePath,
+        categoryName: group.name,
+        categoryDescription: group.desc,
+        category: group.category || 'printed-adults', // Default category if undefined
+        badge: group.badge,
+        displayName: `${group.name} - ${filename}`
+      });
+    });
+  });
+  
+  return flattened;
+}
 
 export default function Products() {
   const [activeCategory, setActiveCategory] = useState<Category>('all');
 
+  // Flatten products once on mount using useMemo
+  const allProducts = useMemo(() => flattenProducts(groupedProducts), []);
+
   const filteredProducts = activeCategory === 'all' 
-    ? products 
-    : products.filter(p => p.category === activeCategory);
+    ? allProducts 
+    : allProducts.filter((p: IndividualProduct) => p.category === activeCategory);
 
   const handleWhatsApp = (productName: string) => {
     const phoneNumber = '919321137312';
@@ -56,10 +267,10 @@ export default function Products() {
         <div className="flex gap-[12px] flex-wrap justify-center">
           {[
             { label: 'All Products', value: 'all' as Category },
-            { label: 'T-Shirts', value: 'tshirts' as Category },
-            { label: 'Hoodies', value: 'hoodies' as Category },
-            { label: 'Accessories', value: 'accessories' as Category },
-            { label: 'Corporate', value: 'corporate' as Category },
+            { label: 'Printed Apparel', value: 'printed-adults' as Category },
+            { label: 'Handpainted', value: 'handpainted' as Category },
+            { label: 'Kids Wear', value: 'kids' as Category },
+            { label: 'Other Products', value: 'other' as Category },
           ].map((tab) => (
             <button
               key={tab.value}
@@ -79,10 +290,17 @@ export default function Products() {
       {/* Products Grid */}
       <section className="px-[8vw] py-[60px]">
         <div className="grid grid-cols-3 gap-[28px] max-md:grid-cols-2 max-sm:grid-cols-1">
-          {filteredProducts.map((product, i) => (
-            <div key={i} className="bg-white rounded-[20px] overflow-hidden shadow-[0_8px_40px_rgba(214,51,132,0.12)] transition-all duration-300 hover:translate-y-[-6px] hover:shadow-[0_16px_50px_rgba(214,51,132,0.2)]">
-              <div className="bg-gradient-to-br from-[var(--pink-pale)] to-[#fce4ec] h-[200px] flex items-center justify-center text-[5rem] relative">
-                {product.emoji}
+          {filteredProducts.map((product: IndividualProduct, i: number) => (
+            <div key={product.id} className="bg-white rounded-[20px] overflow-hidden shadow-[0_8px_40px_rgba(214,51,132,0.12)] transition-all duration-300 hover:translate-y-[-6px] hover:shadow-[0_16px_50px_rgba(214,51,132,0.2)]">
+              <div className="bg-gradient-to-br from-[var(--pink-pale)] to-[#fce4ec] h-[280px] flex items-center justify-center relative overflow-hidden">
+                <Image
+                  src={product.imagePath}
+                  alt={product.displayName}
+                  width={400}
+                  height={400}
+                  className="object-cover w-full h-full"
+                  loading="lazy"
+                />
                 {product.badge && (
                   <span className="absolute top-[12px] right-[12px] bg-[var(--pink)] text-white px-[12px] py-[4px] rounded-full text-[0.75rem] font-bold">
                     {product.badge}
@@ -90,11 +308,11 @@ export default function Products() {
                 )}
               </div>
               <div className="px-[24px] py-[20px] pb-[24px]">
-                <div className="font-bold text-[1.05rem] mb-[6px]">{product.name}</div>
-                <p className="text-[var(--gray)] text-[0.875rem] leading-[1.6] mb-[14px]">{product.desc}</p>
+                <div className="font-bold text-[1.05rem] mb-[6px]">{product.categoryName}</div>
+                <p className="text-[var(--gray)] text-[0.875rem] leading-[1.6] mb-[14px]">{product.categoryDescription}</p>
                 <div className="flex items-center justify-between gap-[8px]">
                   <button
-                    onClick={() => handleWhatsApp(product.name)}
+                    onClick={() => handleWhatsApp(product.displayName)}
                     className="flex-1 bg-[#25D366] text-white border-none rounded-full px-[16px] py-[8px] text-[0.8rem] font-bold cursor-pointer transition-all duration-200 hover:bg-[#20BA5A] flex items-center justify-center gap-[6px]"
                   >
                     <svg viewBox="0 0 24 24" className="w-[16px] h-[16px] fill-white">
