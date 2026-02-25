@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 export default function Home() {
   const [countersAnimated, setCountersAnimated] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   // Customer images array
   const customerImages = [
@@ -24,6 +25,18 @@ export default function Home() {
       }, 400);
     }
   }, [countersAnimated]);
+
+  // Detect mobile screen size
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Auto-rotate customer images every 3 seconds
   useEffect(() => {
@@ -296,19 +309,19 @@ export default function Home() {
         {/* Customer Images Gallery - Smooth Sliding Carousel */}
         <div className="relative overflow-hidden mb-[60px]">
           <div 
-            className="flex gap-[24px] transition-transform duration-1000 ease-in-out max-md:gap-[16px]"
+            className="flex gap-[24px] transition-transform duration-1000 ease-in-out max-md:gap-0"
             style={{
-              transform: `translateX(-${currentImageIndex * (100 / 3)}%)`
+              transform: `translateX(-${currentImageIndex * (isMobile ? 100 : 100 / 3)}%)`
             }}
           >
             {/* Duplicate images for infinite loop effect */}
             {[...customerImages, ...customerImages].map((image, index) => (
               <div 
                 key={index}
-                className="relative h-[320px] rounded-[20px] overflow-hidden shadow-[0_12px_50px_rgba(214,51,132,0.2)] transition-transform hover:scale-[1.02] flex-shrink-0 max-md:h-[280px]"
+                className="relative h-[320px] rounded-[20px] overflow-hidden shadow-[0_12px_50px_rgba(214,51,132,0.2)] transition-transform hover:scale-[1.02] flex-shrink-0 max-md:h-[400px] max-md:w-full max-md:rounded-[16px]"
                 style={{ 
-                  width: 'calc(33.333% - 16px)',
-                  minWidth: 'calc(33.333% - 16px)'
+                  width: isMobile ? '100%' : 'calc(33.333% - 16px)',
+                  minWidth: isMobile ? '100%' : 'calc(33.333% - 16px)'
                 }}
               >
                 <Image 
