@@ -257,8 +257,15 @@ export default function About() {
             </p>
             <div className="flex items-center justify-center gap-[40px] flex-wrap">
               <div className="text-center">
-                <div className="w-[80px] h-[80px] mx-auto mb-[12px] rounded-full bg-gradient-to-br from-[var(--pink)] to-[var(--pink-light)] flex items-center justify-center text-[2rem] text-white shadow-[0_8px_24px_rgba(214,51,132,0.3)]">
-                  P
+                <div className="w-[120px] h-[120px] mx-auto mb-[16px] rounded-full overflow-hidden shadow-[0_8px_24px_rgba(214,51,132,0.3)] border-4 border-white">
+                  <Image
+                    src="/images/Prathamesh-Ranjan-Talpade.jpeg"
+                    alt="Prathamesh Ranjan Talpade - Founder & Creative Director"
+                    width={120}
+                    height={120}
+                    className="object-cover w-full h-full "
+                    unoptimized
+                  />
                 </div>
                 <div className="font-bold text-[var(--dark)]">Prathamesh Ranjan Talpade</div>
                 <div className="text-[var(--pink)] text-[0.9rem]">Founder & Creative Director</div>
@@ -266,8 +273,15 @@ export default function About() {
               </div>
               <div className="w-[2px] h-[80px] bg-[var(--pink)] max-sm:hidden"></div>
               <div className="text-center">
-                <div className="w-[80px] h-[80px] mx-auto mb-[12px] rounded-full bg-gradient-to-br from-[var(--pink)] to-[var(--pink-light)] flex items-center justify-center text-[2rem] text-white shadow-[0_8px_24px_rgba(214,51,132,0.3)]">
-                  P
+                <div className="w-[120px] h-[120px] mx-auto mb-[16px] rounded-full overflow-hidden shadow-[0_8px_24px_rgba(214,51,132,0.3)] border-4 border-white">
+                  <Image
+                    src="/images/Priyam-Talpade.jpeg"
+                    alt="Priyam Talpade-Mandrekar - Co-Founder & Marketing Head"
+                    width={120}
+                    height={120}
+                    className="object-cover w-full h-full"
+                    unoptimized
+                  />
                 </div>
                 <div className="font-bold text-[var(--dark)]">Priyam Talpade-Mandrekar</div>
                 <div className="text-[var(--pink)] text-[0.9rem]">Co-Founder & Marketing Head</div>
@@ -283,13 +297,32 @@ export default function About() {
             </h3>
             <div className="grid grid-cols-3 gap-[32px] max-md:grid-cols-2 max-sm:grid-cols-1">
               {[
-                { name: 'Sampada M Kulkarni', role: 'Partner - Pune Branch', initial: 'S' },
-                { name: 'Niraj Gaikwad', role: 'Creative Head', initial: 'N' },
-                { name: 'Suraj Gaikwad', role: 'Social Media Marketing Head', initial: 'S' },
+                { 
+                  name: 'Sampada M Kulkarni', 
+                  role: 'Partner - Pune Branch', 
+                  image: '/images/Sampada-gulkarni.jpeg'
+                },
+                { 
+                  name: 'Niraj Gaikwad', 
+                  role: 'Creative Head', 
+                  image: '/images/Niraj-gaikwad.jpeg'
+                },
+                { 
+                  name: 'Suraj Gaikwad', 
+                  role: 'Social Media Marketing Head', 
+                  image: '/images/Suraj-gaikwad.jpeg'
+                },
               ].map((member, i) => (
                 <div key={i} className="bg-white rounded-[20px] p-[32px] text-center shadow-[0_8px_40px_rgba(214,51,132,0.12)] transition-all hover:translate-y-[-4px] hover:shadow-[0_12px_50px_rgba(214,51,132,0.18)]">
-                  <div className="w-[70px] h-[70px] mx-auto mb-[16px] rounded-full bg-gradient-to-br from-[var(--pink-pale)] to-[#fce4ec] flex items-center justify-center text-[1.8rem] text-[var(--pink)] font-bold shadow-[0_4px_16px_rgba(214,51,132,0.2)]">
-                    {member.initial}
+                  <div className="w-[100px] h-[100px] mx-auto mb-[20px] rounded-full overflow-hidden shadow-[0_4px_16px_rgba(214,51,132,0.2)] border-4 border-[var(--pink-pale)]">
+                    <Image
+                      src={member.image}
+                      alt={`${member.name} - ${member.role}`}
+                      width={100}
+                      height={100}
+                      className="object-cover w-full h-full"
+                      unoptimized
+                    />
                   </div>
                   <div className="font-bold text-[1.05rem] text-[var(--dark)] mb-[6px]">{member.name}</div>
                   <div className="text-[var(--pink)] text-[0.9rem]">{member.role}</div>
