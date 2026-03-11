@@ -34,22 +34,8 @@ const groupedProducts: GroupedProduct[] = [
     category: 'printed-adults', 
     badge: 'Bestseller', 
     images: [
-      '/round-neck-tshirt (1).jpeg',
-      '/round-neck-tshirt (2).jpeg',
-      '/round-neck-tshirt (3).jpeg',
-      '/round-neck-tshirt (4).jpeg',
-      '/round-neck-tshirt (5).jpeg',
-      '/round-neck-tshirt (6).jpeg',
-      '/round-neck-tshirt (7).jpeg',
-      '/round-neck-tshirt (8).jpeg',
-      '/round-neck-tshirt (9).jpeg',
-      '/round-neck-tshirt (10).jpeg',
-      '/round-neck-tshirt (11).jpeg',
-      '/round-neck-tshirt (12).jpeg',
-      '/round-neck-tshirt (13).jpeg',
-      '/round-neck-tshirt (14).jpeg',
-      '/round-neck-tshirt (15).jpeg',
-      '/round-neck-tshirt (16).jpeg',
+      '/images/round-neck.jpeg',
+      '/images/round-neck-1.jpeg',
     ]
   },
   
@@ -60,46 +46,10 @@ const groupedProducts: GroupedProduct[] = [
     category: 'printed-adults', 
     badge: 'Popular',
     images: [
-      '/collar-tshirt (1).jpeg',
-      '/collar-tshirt (2).jpeg',
-      '/collar-tshirt (3).jpeg',
-      '/collar-tshirt (4).jpeg',
-      '/collar-tshirt (5).jpeg',
-      '/collar-tshirt (6).jpeg',
-      '/collar-tshirt (7).jpeg',
-      '/collar-tshirt (8).jpeg',
-      '/collar-tshirt (9).jpeg',
-      '/collar-shirt (1).jpeg',
-      '/collar-shirt (2).jpeg',
-    ]
-  },
-  
-  // Nylon T-shirts
-  { 
-    name: 'Nylon T-shirts', 
-    desc: 'Lightweight, quick-dry nylon tees perfect for sports, gym, and outdoor activities.', 
-    category: 'printed-adults', 
-    images: [
-      '/nylon-tshirt (1).jpeg',
-      '/nylon-tshirt (2).jpeg',
-    ]
-  },
-  
-  // Handpainted T-shirts
-  { 
-    name: 'Handpainted T-shirts', 
-    desc: 'Unique hand-painted designs on premium tees. Each piece is one-of-a-kind art for kids & adults.', 
-    category: 'handpainted', 
-    badge: 'Exclusive', 
-    images: [
-      '/handpainted-tshirt (1).jpeg',
-      '/handpainted-tshirt (2).jpeg',
-      '/handpainted-tshirt (3).jpeg',
-      '/handpainted-tshirt (4).jpeg',
-      '/handpainted-tshirt (5).jpeg',
-      '/handpainted-tshirt (6).jpeg',
-      '/handpainted-tshirt (7).jpeg',
-      '/handpainted-tshirt (8).jpeg',
+      '/images/collar-tshirt (1).jpeg',
+      '/images/collar-tshirt (2).jpeg',
+      '/images/collar-tshirt (3).jpeg',
+      '/images/collar-tshirt (4).jpeg',
     ]
   },
   
@@ -110,89 +60,31 @@ const groupedProducts: GroupedProduct[] = [
     category: 'kids', 
     badge: 'New',
     images: [
-      '/kids-tshirt (1).jpeg',
-      '/kids-tshirt (2).jpeg',
-      '/kids-tshirt (3).jpeg',
-      '/kids-tshirt (4).jpeg',
-      '/kids-tshirt (5).jpeg',
-      '/kids-tshirt (6).jpeg',
-      '/kids-tshirt (7).jpeg',
-      '/kids-tshirt (8).jpeg',
-      '/kids-tshirt (9).jpeg',
-      '/kids-tshirt (10).jpeg',
-      '/kids-tshirt (11).jpeg',
-      '/kids-tshirt (12).jpeg',
-      '/kids-tshirt (13).jpeg',
-      '/kids-tshirt (14).jpeg',
+      '/images/kids (1).jpeg',
+      '/images/kids (2).jpeg',
+      '/images/kids-1 (1).jpeg',
+      '/images/kids-1 (2).jpeg',
+      '/images/kids-2 (1).jpeg',
+      '/images/kids-2 (2).jpeg',
+      '/images/kids-3 (1).jpeg',
+      '/images/kids-3 (2).jpeg',
+      '/images/kids-3 (3).jpeg',
+      '/images/kids-3 (4).jpeg',
+      '/images/kids-3 (5).jpeg',
+      '/images/kids-4.jpeg',
+      '/images/kids-5 (1).jpeg',
+      '/images/kids-5 (2).jpeg',
     ]
   },
   
-  // Couple T-shirts
+  // Custom Bags
   { 
-    name: 'Couple T-shirts', 
-    desc: 'Matching couple tees with creative designs. Perfect for anniversaries, dates, and special occasions.', 
-    category: 'couple', 
-    badge: 'Trending',
-    images: [
-      '/couple-tshirt (1).jpeg',
-      '/couple-tshirt (2).jpeg',
-      '/couple-tshirt (3).jpeg',
-      '/couple-tshirt (4).jpeg',
-      '/couple-tshirt (5).jpeg',
-    ]
-  },
-  
-  // Group T-shirts
-  { 
-    name: 'Group T-shirts', 
-    desc: 'Coordinated group tees perfect for teams, events, family reunions, and corporate gatherings.', 
-    category: 'other', 
-    images: [
-      '/family-group.jpeg',
-    ]
-  },
-  
-  // Custom Caps
-  { 
-    name: 'Custom Caps', 
-    desc: 'Personalized caps with custom embroidery and printing. Perfect for corporate branding, events, and casual wear.', 
+    name: 'Custom Bags', 
+    desc: 'Personalized bags with custom printing. Perfect for gifts, events, and promotional items.', 
     category: 'other', 
     badge: 'New',
     images: [
-      '/cap-eith-tshirt.jpeg',
-    ]
-  },
-  
-  // Custom Pouches
-  { 
-    name: 'Custom Pouches', 
-    desc: 'Personalized pouches and bags with custom printing. Perfect for gifts, events, and promotional items.', 
-    category: 'other', 
-    images: [
-      '/pouches (1).jpeg',
-      '/pouches (2).jpeg',
-      '/pouches (3).jpeg',
-      '/pouches-1 (1).JPG',
-      '/pouches-1 (2).JPG',
-      '/pouches-1 (3).JPG',
-      '/pouches-2 (1).JPG',
-      '/pouches-2 (2).JPG',
-      '/pouches-3.JPG',
-      '/pouches.JPG',
-      '/poches-with-pocket perfume (1).JPG',
-      '/poches-with-pocket perfume (2).JPG',
-      '/poches-with-pocket perfume (3).JPG',
-    ]
-  },
-  
-  // Shopping Bags
-  { 
-    name: 'Shopping Bags', 
-    desc: 'Custom printed shopping bags for retail, events, and promotional purposes. Durable and eco-friendly options.', 
-    category: 'other', 
-    images: [
-      '/shopping-bags (1).jpeg',
-      '/shopping-bags (2).jpeg',
+      '/images/bag.jpeg',
     ]
   },
 ];
@@ -268,7 +160,6 @@ export default function Products() {
           {[
             { label: 'All Products', value: 'all' as Category },
             { label: 'Printed Apparel', value: 'printed-adults' as Category },
-            { label: 'Handpainted', value: 'handpainted' as Category },
             { label: 'Kids Wear', value: 'kids' as Category },
             { label: 'Other Products', value: 'other' as Category },
           ].map((tab) => (

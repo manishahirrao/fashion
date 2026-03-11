@@ -372,149 +372,319 @@ export default function Home() {
 
  
 
+      {/* WhatsApp Affiliate Partner Program */}
+      <section className="px-[8vw] py-[90px] bg-gradient-to-br from-[#fff5f8] to-[var(--pink-pale)]">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="text-center mb-[56px]">
+            <div className="inline-flex items-center gap-[8px] bg-[#25D366] text-white px-[16px] py-[6px] rounded-full text-[0.75rem] font-bold mb-[20px] tracking-[0.05em] uppercase shadow-sm">
+              <span>📱</span>
+              <span>WhatsApp Affiliate Program</span>
+            </div>
+            <h2 className="font-['Playfair_Display'] text-[clamp(2rem,3.5vw,3.5rem)] text-[var(--dark)] mb-[20px] leading-[1.2]">
+              Turn Your WhatsApp Network Into <em className="text-[var(--pink)] italic">Income</em>
+            </h2>
+            <p className="text-[var(--gray)] leading-[1.8] max-w-[800px] mx-auto text-[1.1rem]">
+              Earn commissions by promoting FaVi Craze custom apparel directly through WhatsApp. Perfect for housewives, retired individuals, students, and self-employed professionals who want to generate income using their existing network.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-[60px] items-start max-md:grid-cols-1 mb-[60px]">
+            <div>
+              <h3 className="text-[1.6rem] font-bold text-[var(--dark)] mb-[24px]">How It Works</h3>
+              <p className="text-[var(--gray)] leading-[1.8] mb-[32px]">
+                Simply share our products with your friends, family, contacts, WhatsApp status, and groups. When someone is interested, you connect them with us — and we handle everything else.
+              </p>
+              
+              <div className="space-y-[24px] mb-[40px]">
+                {[
+                  { step: '1', title: 'Share Products', desc: 'Share FaVi Craze product designs on your WhatsApp status and groups' },
+                  { step: '2', title: 'Receive Enquiries', desc: 'Get enquiries from interested customers in your network' },
+                  { step: '3', title: 'Connect & Earn', desc: 'Connect the customer with our team and earn commission on every order' },
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-[16px] items-start">
+                    <div className="w-[48px] h-[48px] flex-shrink-0 rounded-full bg-[#25D366] flex items-center justify-center text-white font-bold text-[1.1rem]">
+                      {item.step}
+                    </div>
+                    <div>
+                      <div className="font-bold text-[var(--dark)] mb-[6px] text-[1.1rem]">{item.title}</div>
+                      <div className="text-[var(--gray)] text-[0.95rem] leading-[1.6]">{item.desc}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="bg-white rounded-[20px] p-[32px] shadow-[0_8px_40px_rgba(214,51,132,0.12)]">
+                <h4 className="font-bold text-[var(--dark)] mb-[16px] text-[1.2rem]">Your Benefits</h4>
+                <ul className="space-y-[12px]">
+                  {[
+                    'Zero Investment – Start without spending money',
+                    'Zero Inventory – No stock required',
+                    'No Operations – We manage production and order handling',
+                    'No Delivery Hassles – We pack and ship to the customer',
+                    'End-to-End Support from Team FaVi Craze',
+                  ].map((benefit, i) => (
+                    <li key={i} className="flex items-start gap-[12px] text-[var(--gray)]">
+                      <span className="text-[#25D366] text-[1.2rem] flex-shrink-0">✓</span>
+                      <span className="text-[0.95rem]">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-[#25D366] to-[#128C7E] rounded-[24px] p-[40px] text-white relative overflow-hidden">
+              <div className="absolute top-[-50px] right-[-50px] w-[150px] h-[150px] rounded-full bg-white/10"></div>
+              <div className="absolute bottom-[-30px] left-[-30px] w-[100px] h-[100px] rounded-full bg-white/5"></div>
+              
+              <div className="relative z-10">
+                <div className="text-center mb-[32px]">
+                  <div className="w-[80px] h-[80px] mx-auto mb-[16px] rounded-full bg-white/20 flex items-center justify-center text-[2.5rem]">
+                    💰
+                  </div>
+                  <h3 className="font-['Playfair_Display'] text-[1.8rem] mb-[8px]">Earn Big Commissions</h3>
+                  <p className="text-white/80 text-[0.95rem]">Start earning from your first referral</p>
+                </div>
+
+                <div className="space-y-[20px] mb-[32px]">
+                  {[
+                    'Earn up to 15% commission on every successful order',
+                    'Unique referral code for easy tracking',
+                    'Weekly payouts via UPI or bank transfer',
+                    'Ready-to-use marketing creatives & promotional content',
+                    'Real-time tracking of your earnings',
+                    'Special discounts on FaVi Craze products for you',
+                  ].map((feature, i) => (
+                    <div key={i} className="flex items-start gap-[12px]">
+                      <span className="text-white text-[1.2rem] flex-shrink-0">✓</span>
+                      <span className="text-white/90 text-[0.9rem]">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="bg-white/10 rounded-[16px] p-[20px] mb-[24px]">
+                  <div className="text-center">
+                    <div className="text-[2rem] font-bold mb-[4px]">15%</div>
+                    <div className="text-white/80 text-[0.85rem]">Maximum Commission Rate</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-[24px] p-[48px] shadow-[0_12px_50px_rgba(214,51,132,0.15)] mb-[48px]">
+            <h3 className="text-[1.8rem] font-bold text-[var(--dark)] mb-[32px] text-center">How We Handle Your Orders</h3>
+            <div className="grid grid-cols-4 gap-[32px] max-md:grid-cols-2 max-sm:grid-cols-1">
+              {[
+                { icon: '🎨', title: 'Design Creation', desc: 'We understand customer requirements and create design mockups' },
+                { icon: '✅', title: 'Approval Process', desc: 'Send design for customer approval and make revisions if needed' },
+                { icon: '🖨️', title: 'Premium Printing', desc: 'Print the approved design on premium quality apparel' },
+                { icon: '📦', title: 'Direct Delivery', desc: 'Pack and deliver the product directly to your customer' },
+              ].map((step, i) => (
+                <div key={i} className="text-center">
+                  <div className="w-[80px] h-[80px] mx-auto mb-[16px] rounded-full bg-[var(--pink-pale)] flex items-center justify-center text-[2rem]">
+                    {step.icon}
+                  </div>
+                  <h4 className="font-bold text-[var(--dark)] mb-[8px] text-[1.1rem]">{step.title}</h4>
+                  <p className="text-[var(--gray)] text-[0.9rem] leading-[1.5]">{step.desc}</p>
+                </div>
+              ))}
+            </div>
+            <div className="text-center mt-[32px]">
+              <p className="text-[var(--pink)] font-semibold text-[1.1rem]">You earn your commission once the order is delivered!</p>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <div className="inline-flex items-center gap-[8px] bg-[var(--pink-pale)] text-[var(--pink)] px-[16px] py-[6px] rounded-full text-[0.8rem] font-bold mb-[20px] tracking-[0.05em] uppercase">
+              <span>👥</span>
+              <span>Perfect For</span>
+            </div>
+            <div className="flex flex-wrap justify-center gap-[16px] mb-[40px]">
+              {['Housewives', 'Students', 'Retired Professionals', 'Influencers', 'Freelancers', 'Anyone with WhatsApp'].map((target, i) => (
+                <span key={i} className="bg-white px-[20px] py-[10px] rounded-full text-[var(--dark)] font-semibold text-[0.9rem] shadow-[0_4px_20px_rgba(214,51,132,0.1)]">
+                  {target}
+                </span>
+              ))}
+            </div>
+            <a 
+              href="https://wa.me/919321137312?text=Hi!%20I%20want%20to%20join%20the%20FaVi%20Craze%20WhatsApp%20Affiliate%20Program.%20Please%20share%20more%20details." 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-[12px] bg-[#25D366] text-white px-[40px] py-[16px] rounded-full no-underline font-bold text-[1rem] shadow-[0_8px_30px_rgba(37,211,102,0.4)] transition-all duration-200 hover:translate-y-[-2px] hover:shadow-[0_12px_40px_rgba(37,211,102,0.5)]"
+            >
+              <svg viewBox="0 0 24 24" className="w-[20px] h-[20px] fill-white">
+                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 21.5c-1.864 0-3.605-.561-5.055-1.527l-3.611.968.977-3.638c-1.004-1.454-1.589-3.217-1.589-5.115 0-5.238 4.262-9.5 9.5-9.5s9.5 4.262 9.5 9.5-4.262 9.5-9.5 9.5zm5.139-6.857c-.281-.141-1.664-.821-1.922-.915-.258-.094-.446-.141-.633.141s-.727.915-.891 1.102c-.164.188-.328.211-.609.07-.281-.141-1.186-.437-2.258-1.393-.835-.744-1.399-1.663-1.563-1.945-.164-.281-.017-.433.123-.573.126-.126.281-.328.422-.492.141-.164.188-.281.281-.469.094-.188.047-.352-.023-.492-.07-.141-.633-1.524-.867-2.086-.228-.547-.459-.473-.633-.481-.164-.008-.352-.008-.539-.008s-.492.07-.75.352c-.258.281-.984.961-.984 2.344s1.008 2.719 1.148 2.906c.141.188 1.984 3.028 4.805 4.242.672.289 1.195.461 1.602.59.675.214 1.289.184 1.773.112.54-.08 1.664-.68 1.898-1.336.234-.656.234-1.219.164-1.336-.07-.117-.258-.188-.539-.328z"/>
+              </svg>
+              Join WhatsApp Affiliate Program
+            </a>
+            <p className="text-[var(--gray)] text-[0.9rem] mt-[16px]">
+              Start today and turn your WhatsApp into a powerful income channel with FaVi Craze.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Become a Reseller Section */}
       <section className="px-[8vw] py-[90px]">
-        <div className="max-w-[1100px] mx-auto">
-          <div className="grid grid-cols-2 gap-[60px] items-center max-md:grid-cols-1">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="text-center mb-[56px]">
+            <div className="inline-flex items-center gap-[8px] bg-[var(--pink-pale)] text-[var(--pink)] px-[16px] py-[6px] rounded-full text-[0.75rem] font-bold mb-[20px] tracking-[0.05em] uppercase shadow-sm">
+              <span>🤝</span>
+              <span>Partnership Opportunity</span>
+            </div>
+            <h2 className="font-['Playfair_Display'] text-[clamp(2rem,3.5vw,3.5rem)] text-[var(--dark)] mb-[20px] leading-[1.2]">
+              Become a <em className="text-[var(--pink)] italic">Reseller</em>
+            </h2>
+            <p className="text-[var(--gray)] leading-[1.8] max-w-[800px] mx-auto text-[1.1rem]">
+              Join India's fastest-growing custom apparel brand – Favi Craze and build your own profitable fashion business. Whether you sell online or run a retail store, our reseller program is designed to help you grow with premium products, flexible selling options, and strong support.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-[60px] items-start max-md:grid-cols-1 mb-[60px]">
             <div>
-              <div className="inline-flex items-center gap-[8px] bg-[var(--pink-pale)] text-[var(--pink)] px-[16px] py-[6px] rounded-full text-[0.75rem] font-bold mb-[20px] tracking-[0.05em] uppercase shadow-sm">
-                <span>🤝</span>
-                <span>Partnership Opportunity</span>
-              </div>
-              <h2 className="font-['Playfair_Display'] text-[clamp(2rem,3.5vw,3rem)] text-[var(--dark)] mb-[20px] leading-[1.2]">
-                Become a <em className="text-[var(--pink)] italic">Reseller</em>
-              </h2>
-              <p className="text-[var(--gray)] leading-[1.8] mb-[24px]">
-                Join India's fastest-growing custom apparel brand and build your own profitable business. As a Favi Craze reseller, you'll get exclusive access to premium products, competitive pricing, and dedicated support to help you succeed.
+              <h3 className="text-[1.6rem] font-bold text-[var(--dark)] mb-[24px]">Why Partner With Favi Craze?</h3>
+              <p className="text-[var(--gray)] leading-[1.8] mb-[32px]">
+                As a Favi Craze Reseller, you gain access to high-quality custom apparel, competitive pricing, and tools that help you scale your business faster.
               </p>
-              <ul className="space-y-[12px] mb-[32px]">
+              
+              <ul className="space-y-[16px] mb-[40px]">
                 {[
-                  'Zero investment required to start',
+                  'Minimum investment required to start',
                   'Attractive profit margins on every order',
                   'Access to our complete product catalog',
-                  'Marketing materials and design support',
-                  'Dedicated reseller dashboard',
-                  'Priority customer service',
+                  'Marketing creatives & design support',
+                  'Apparel Design for your store',
+                  'Priority reseller support',
                 ].map((benefit, i) => (
                   <li key={i} className="flex items-start gap-[12px] text-[var(--gray)]">
                     <span className="text-[var(--pink)] text-[1.2rem] flex-shrink-0">✓</span>
-                    <span>{benefit}</span>
+                    <span className="text-[0.95rem]">{benefit}</span>
                   </li>
                 ))}
               </ul>
-              <a 
-                href="https://wa.me/919321137312?text=Hi!%20I%20want%20to%20become%20a%20Favi%20Craze%20reseller.%20Please%20share%20more%20details." 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-block bg-[var(--pink)] text-white px-[32px] py-[14px] rounded-full no-underline font-semibold text-[0.95rem] shadow-[0_6px_24px_rgba(214,51,132,0.4)] transition-all duration-200 hover:translate-y-[-2px] hover:shadow-[0_8px_30px_rgba(214,51,132,0.5)]"
-              >
-                Join as Reseller →
-              </a>
+
+              <div className="bg-gradient-to-br from-[var(--pink-pale)] to-[#fce4ec] rounded-[20px] p-[32px]">
+                <h4 className="font-bold text-[var(--dark)] mb-[16px] text-[1.2rem]">Start Your Reseller Journey Today</h4>
+                <p className="text-[var(--gray)] mb-[24px] text-[0.95rem] leading-[1.6]">
+                  Whether you want to build an online clothing brand or grow your retail store, Favi Craze provides the products, support, and infrastructure to help you succeed.
+                </p>
+                <a 
+                  href="https://wa.me/919321137312?text=Hi!%20I%20want%20to%20become%20a%20Favi%20Craze%20reseller.%20Please%20share%20more%20details." 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block bg-[var(--pink)] text-white px-[32px] py-[14px] rounded-full no-underline font-semibold text-[0.95rem] shadow-[0_6px_24px_rgba(214,51,132,0.4)] transition-all duration-200 hover:translate-y-[-2px] hover:shadow-[0_8px_30px_rgba(214,51,132,0.5)]"
+                >
+                  Apply Now as Reseller →
+                </a>
+              </div>
             </div>
+
             <div className="bg-white rounded-[24px] p-[40px] shadow-[0_12px_50px_rgba(214,51,132,0.15)]">
               <div className="text-center mb-[32px]">
                 <div className="w-[80px] h-[80px] mx-auto mb-[16px] rounded-full bg-gradient-to-br from-[var(--pink)] to-[var(--pink-light)] flex items-center justify-center text-[2.5rem] text-white shadow-[0_8px_24px_rgba(214,51,132,0.3)]">
                   💼
                 </div>
-                <h3 className="font-['Playfair_Display'] text-[1.6rem] text-[var(--dark)] mb-[8px]">Start Your Journey</h3>
-                <p className="text-[var(--gray)] text-[0.9rem]">Join 3+ successful resellers across Maharashtra</p>
+                <h3 className="font-['Playfair_Display'] text-[1.6rem] text-[var(--dark)] mb-[8px]">Reseller Opportunities</h3>
+                <p className="text-[var(--gray)] text-[0.9rem]">Choose the model that fits your business</p>
               </div>
-              <div className="space-y-[20px]">
-                {[
-                  { step: '01', title: 'Apply', desc: 'Fill out a simple application form' },
-                  { step: '02', title: 'Get Approved', desc: 'Receive your reseller credentials' },
-                  { step: '03', title: 'Start Selling', desc: 'Begin earning from day one' },
-                ].map((item, i) => (
-                  <div key={i} className="flex gap-[16px] items-start">
-                    <div className="w-[40px] h-[40px] flex-shrink-0 rounded-full bg-[var(--pink-pale)] flex items-center justify-center text-[var(--pink)] font-bold text-[0.85rem]">
-                      {item.step}
+              
+              <div className="space-y-[24px]">
+                <div className="border border-[rgba(214,51,132,0.2)] rounded-[16px] p-[20px]">
+                  <div className="flex items-center gap-[12px] mb-[12px]">
+                    <div className="w-[40px] h-[40px] rounded-full bg-[#4285F4]/10 flex items-center justify-center">
+                      <span className="text-[#4285F4] text-[1.2rem]">🌐</span>
                     </div>
-                    <div>
-                      <div className="font-bold text-[var(--dark)] mb-[4px]">{item.title}</div>
-                      <div className="text-[var(--gray)] text-[0.85rem]">{item.desc}</div>
-                    </div>
+                    <h4 className="font-bold text-[var(--dark)] text-[1.1rem]">Online Resellers</h4>
                   </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      
-
-      {/* WhatsApp Affiliate Partner Program */}
-      <section className="px-[8vw] py-[90px]">
-        <div className="max-w-[1100px] mx-auto">
-          <div className="grid grid-cols-2 gap-[60px] items-center max-md:grid-cols-1">
-            <div className="bg-gradient-to-br from-[#25D366] to-[#128C7E] rounded-[24px] p-[48px] text-white relative overflow-hidden max-md:order-2">
-              <div className="absolute top-[-50px] right-[-50px] w-[200px] h-[200px] rounded-full bg-white/10 blur-[60px]"></div>
-              <div className="relative z-10">
-                <div className="w-[70px] h-[70px] mb-[24px] rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                  <svg viewBox="0 0 24 24" className="w-[40px] h-[40px] fill-white">
-                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 21.5c-1.864 0-3.605-.561-5.055-1.527l-3.611.968.977-3.638c-1.004-1.454-1.589-3.217-1.589-5.115 0-5.238 4.262-9.5 9.5-9.5s9.5 4.262 9.5 9.5-4.262 9.5-9.5 9.5zm5.139-6.857c-.281-.141-1.664-.821-1.922-.915-.258-.094-.446-.141-.633.141s-.727.915-.891 1.102c-.164.188-.328.211-.609.07-.281-.141-1.186-.437-2.258-1.393-.835-.744-1.399-1.663-1.563-1.945-.164-.281-.017-.433.123-.573.126-.126.281-.328.422-.492.141-.164.188-.281.281-.469.094-.188.047-.352-.023-.492-.07-.141-.633-1.524-.867-2.086-.228-.547-.459-.473-.633-.481-.164-.008-.352-.008-.539-.008s-.492.07-.75.352c-.258.281-.984.961-.984 2.344s1.008 2.719 1.148 2.906c.141.188 1.984 3.028 4.805 4.242.672.289 1.195.461 1.602.59.675.214 1.289.184 1.773.112.54-.08 1.664-.68 1.898-1.336.234-.656.234-1.219.164-1.336-.07-.117-.258-.188-.539-.328z"/>
-                  </svg>
+                  <p className="text-[var(--gray)] text-[0.85rem] mb-[12px]">Perfect for entrepreneurs, creators, and online sellers who want to build a clothing business without inventory.</p>
+                  <div className="text-[0.8rem] text-[var(--gray)]">
+                    <div className="font-semibold mb-[6px]">Platforms:</div>
+                    <div>E-commerce • Marketplaces • Social Media • Drop-shipping</div>
+                  </div>
                 </div>
-                <h3 className="font-['Playfair_Display'] text-[2rem] mb-[16px] leading-[1.2]">
-                  WhatsApp Affiliate <em className="italic">Partner</em>
-                </h3>
-                <p className="text-white/90 leading-[1.7] mb-[24px]">
-                  Earn commissions by promoting Favi Craze products through WhatsApp. Perfect for influencers, content creators, and anyone with a strong social network.
-                </p>
-                <div className="space-y-[12px]">
-                  {[
-                    'Earn up to 15% commission per sale',
-                    'Unique referral links for tracking',
-                    'Weekly payouts via UPI/Bank transfer',
-                    'Exclusive promotional content',
-                    'Real-time dashboard to track earnings',
-                  ].map((benefit, i) => (
-                    <div key={i} className="flex items-start gap-[12px]">
-                      <span className="text-white text-[1.2rem] flex-shrink-0">✓</span>
-                      <span className="text-white/90 text-[0.95rem]">{benefit}</span>
+
+                <div className="border border-[rgba(214,51,132,0.2)] rounded-[16px] p-[20px]">
+                  <div className="flex items-center gap-[12px] mb-[12px]">
+                    <div className="w-[40px] h-[40px] rounded-full bg-[#FF6B35]/10 flex items-center justify-center">
+                      <span className="text-[#FF6B35] text-[1.2rem]">🏪</span>
                     </div>
-                  ))}
+                    <h4 className="font-bold text-[var(--dark)] text-[1.1rem]">Offline Resellers</h4>
+                  </div>
+                  <p className="text-[var(--gray)] text-[0.85rem] mb-[12px]">Ideal for retail clothing stores, boutiques, and local fashion sellers looking to expand their product offerings.</p>
+                  <div className="text-[0.8rem] text-[var(--gray)]">
+                    <div className="font-semibold mb-[6px]">Minimum:</div>
+                    <div>Just 10 units • Wholesale pricing • 10-day replacement policy</div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="max-md:order-1">
-              <div className="inline-flex items-center gap-[8px] bg-[#25D366]/10 text-[#128C7E] px-[16px] py-[6px] rounded-full text-[0.75rem] font-bold mb-[20px] tracking-[0.05em] uppercase">
-                <span>💰</span>
-                <span>Earn While You Share</span>
+          </div>
+
+          <div className="bg-gradient-to-br from-[#f8fafc] to-[#e2e8f0] rounded-[24px] p-[48px]">
+            <h3 className="text-[1.8rem] font-bold text-[var(--dark)] mb-[32px] text-center">What You Get as a Reseller</h3>
+            
+            <div className="grid grid-cols-2 gap-[40px] max-md:grid-cols-1">
+              <div>
+                <div className="flex items-center gap-[12px] mb-[20px]">
+                  <div className="w-[48px] h-[48px] rounded-full bg-[#4285F4] flex items-center justify-center">
+                    <span className="text-white text-[1.2rem]">🌐</span>
+                  </div>
+                  <h4 className="font-bold text-[var(--dark)] text-[1.3rem]">Online Resellers</h4>
+                </div>
+                <ul className="space-y-[12px]">
+                  {[
+                    'Print-on-Demand model – No inventory required',
+                    'Seamless Drop-Shipping fulfillment',
+                    'Access to our full product catalog',
+                    'Ready-to-use product images & marketing materials',
+                    'Easy order management via reseller dashboard',
+                  ].map((feature, i) => (
+                    <li key={i} className="flex items-start gap-[12px] text-[var(--gray)]">
+                      <span className="text-[#4285F4] text-[1.1rem] flex-shrink-0">✓</span>
+                      <span className="text-[0.9rem]">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-[16px] p-[16px] bg-[#4285F4]/5 rounded-[12px]">
+                  <p className="text-[#4285F4] text-[0.85rem] font-medium">
+                    Start your online clothing business instantly while we handle the printing, packing, and delivery.
+                  </p>
+                </div>
               </div>
-              <h2 className="font-['Playfair_Display'] text-[clamp(2rem,3.5vw,3rem)] text-[var(--dark)] mb-[20px] leading-[1.2]">
-                Turn Your Network Into <em className="text-[var(--pink)] italic">Income</em>
-              </h2>
-              <p className="text-[var(--gray)] leading-[1.8] mb-[32px]">
-                Love our products? Share them with your friends, family, and followers on WhatsApp and earn generous commissions on every sale. No inventory, no investment — just share and earn!
-              </p>
-              <div className="bg-[var(--pink-pale)] rounded-[16px] p-[24px] mb-[32px]">
-                <div className="font-bold text-[var(--dark)] mb-[12px]">How It Works:</div>
-                <ol className="space-y-[8px] list-decimal list-inside text-[var(--gray)]">
-                  <li>Sign up as a WhatsApp Affiliate Partner</li>
-                  <li>Get your unique referral link and promo materials</li>
-                  <li>Share products with your WhatsApp contacts</li>
-                  <li>Earn commission when someone buys through your link</li>
-                  <li>Receive weekly payouts directly to your account</li>
-                </ol>
+
+              <div>
+                <div className="flex items-center gap-[12px] mb-[20px]">
+                  <div className="w-[48px] h-[48px] rounded-full bg-[#FF6B35] flex items-center justify-center">
+                    <span className="text-white text-[1.2rem]">🏪</span>
+                  </div>
+                  <h4 className="font-bold text-[var(--dark)] text-[1.3rem]">Offline Resellers</h4>
+                </div>
+                <ul className="space-y-[12px]">
+                  {[
+                    'Minimum order starts from just 10 units',
+                    'Wholesale pricing for better profit margins',
+                    'Access to premium custom apparel collections',
+                    'Dedicated design and branding support',
+                    '10-day replacement policy for defective products',
+                  ].map((feature, i) => (
+                    <li key={i} className="flex items-start gap-[12px] text-[var(--gray)]">
+                      <span className="text-[#FF6B35] text-[1.1rem] flex-shrink-0">✓</span>
+                      <span className="text-[0.9rem]">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-[16px] p-[16px] bg-[#FF6B35]/5 rounded-[12px]">
+                  <p className="text-[#FF6B35] text-[0.85rem] font-medium">
+                    Add high-demand custom apparel to your store and attract more customers with unique designs.
+                  </p>
+                </div>
               </div>
-              <a 
-                href="https://wa.me/919321137312?text=Hi!%20I%20want%20to%20join%20the%20WhatsApp%20Affiliate%20Partner%20Program.%20Please%20share%20details." 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-[10px] bg-[#25D366] text-white px-[32px] py-[14px] rounded-full no-underline font-semibold text-[0.95rem] shadow-[0_6px_24px_rgba(37,211,102,0.4)] transition-all duration-200 hover:translate-y-[-2px] hover:shadow-[0_8px_30px_rgba(37,211,102,0.5)]"
-              >
-                <svg viewBox="0 0 24 24" className="w-[20px] h-[20px] fill-white">
-                  <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 21.5c-1.864 0-3.605-.561-5.055-1.527l-3.611.968.977-3.638c-1.004-1.454-1.589-3.217-1.589-5.115 0-5.238 4.262-9.5 9.5-9.5s9.5 4.262 9.5 9.5-4.262 9.5-9.5 9.5z"/>
-                </svg>
-                Join Affiliate Program
-              </a>
             </div>
           </div>
         </div>
       </section>
 
-                  {/* FAQ Section */}
+      {/* FAQ Section */}
       <section className="px-[8vw] py-[90px] bg-gradient-to-br from-[#fff5f8] to-[var(--pink-pale)]">
         <div className="max-w-[900px] mx-auto">
           <div className="text-center mb-[56px]">
