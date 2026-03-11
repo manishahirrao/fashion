@@ -27,11 +27,11 @@ interface IndividualProduct {
 }
 
 const groupedProducts: GroupedProduct[] = [
-  // Round Neck T-shirts
+  // Round Neck T-shirts (Handpainted)
   { 
     name: 'Round Neck T-shirts', 
-    desc: 'Classic round neck tees with custom DTF/DTG printing. Premium 180 GSM cotton, XS–7XL.', 
-    category: 'printed-adults', 
+    desc: 'Classic round neck tees with custom handpainted designs. Premium 180 GSM cotton, XS–7XL.', 
+    category: 'handpainted', 
     badge: 'Bestseller', 
     images: [
       '/images/round-neck.jpeg',
@@ -39,11 +39,11 @@ const groupedProducts: GroupedProduct[] = [
     ]
   },
   
-  // Collar T-shirts
+  // Collar T-shirts (Handpainted)
   { 
     name: 'Collar T-shirts', 
-    desc: 'Professional polo-style collar tees perfect for corporate wear and casual outings.', 
-    category: 'printed-adults', 
+    desc: 'Professional polo-style collar tees with handpainted designs perfect for corporate wear and casual outings.', 
+    category: 'handpainted', 
     badge: 'Popular',
     images: [
       '/images/collar-tshirt (1).jpeg',
@@ -77,12 +77,23 @@ const groupedProducts: GroupedProduct[] = [
     ]
   },
   
+  // Custom Aprons
+  { 
+    name: 'Custom Aprons', 
+    desc: 'Personalized aprons with custom printing and handpainted designs. Perfect for kitchens, cafes, and professional use.', 
+    category: 'other', 
+    badge: 'New',
+    images: [
+      '/images/apron (1).jpeg',
+      '/images/apron (2).jpeg',
+    ]
+  },
+  
   // Custom Bags
   { 
     name: 'Custom Bags', 
     desc: 'Personalized bags with custom printing. Perfect for gifts, events, and promotional items.', 
     category: 'other', 
-    badge: 'New',
     images: [
       '/images/bag.jpeg',
     ]
@@ -135,11 +146,12 @@ export default function Products() {
     ? allProducts 
     : allProducts.filter((p: IndividualProduct) => p.category === activeCategory);
 
-  const handleWhatsApp = (productName: string) => {
+  const handleWhatsApp = (productName: string, imagePath: string) => {
     const phoneNumber = '919321137312';
-    const message = `Hi! I would like to inquire about: ${productName}`;
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    window.open(url, '_blank');
+    const whatsappMessage = `Hi! I would like to inquire about: ${productName}`;
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+    
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
@@ -159,7 +171,7 @@ export default function Products() {
         <div className="flex gap-[12px] flex-wrap justify-center">
           {[
             { label: 'All Products', value: 'all' as Category },
-            { label: 'Printed Apparel', value: 'printed-adults' as Category },
+            { label: 'Handpainted Apparel', value: 'handpainted' as Category },
             { label: 'Kids Wear', value: 'kids' as Category },
             { label: 'Other Products', value: 'other' as Category },
           ].map((tab) => (
@@ -203,7 +215,7 @@ export default function Products() {
                 <p className="text-[var(--gray)] text-[0.875rem] leading-[1.6] mb-[14px]">{product.categoryDescription}</p>
                 <div className="flex items-center justify-between gap-[8px]">
                   <button
-                    onClick={() => handleWhatsApp(product.displayName)}
+                    onClick={() => handleWhatsApp(product.displayName, product.imagePath)}
                     className="flex-1 bg-[#25D366] text-white border-none rounded-full px-[16px] py-[8px] text-[0.8rem] font-bold cursor-pointer transition-all duration-200 hover:bg-[#20BA5A] flex items-center justify-center gap-[6px]"
                   >
                     <svg viewBox="0 0 24 24" className="w-[16px] h-[16px] fill-white">

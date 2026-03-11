@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { openWhatsApp } from './utils/enquiry';
 
 export default function Home() {
   const [countersAnimated, setCountersAnimated] = useState(false);
@@ -46,6 +47,23 @@ export default function Home() {
 
     return () => clearInterval(interval);
   }, [customerImages.length]);
+
+  // WhatsApp handlers with mailto backup
+  const handleAffiliateClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    openWhatsApp(
+      '919321137312',
+      'Hi! I want to join the FaVi Craze WhatsApp Affiliate Program. Please share more details.'
+    );
+  };
+
+  const handleResellerClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    openWhatsApp(
+      '919321137312',
+      'Hi! I want to become a Favi Craze reseller. Please share more details.'
+    );
+  };
 
   return (
     <div className="animate-[pageIn_0.4s_ease_forwards]">
@@ -506,17 +524,15 @@ export default function Home() {
                 </span>
               ))}
             </div>
-            <a 
-              href="https://wa.me/919321137312?text=Hi!%20I%20want%20to%20join%20the%20FaVi%20Craze%20WhatsApp%20Affiliate%20Program.%20Please%20share%20more%20details." 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-[12px] bg-[#25D366] text-white px-[40px] py-[16px] rounded-full no-underline font-bold text-[1rem] shadow-[0_8px_30px_rgba(37,211,102,0.4)] transition-all duration-200 hover:translate-y-[-2px] hover:shadow-[0_12px_40px_rgba(37,211,102,0.5)]"
+            <button
+              onClick={handleAffiliateClick}
+              className="inline-flex items-center gap-[12px] bg-[#25D366] text-white px-[40px] py-[16px] rounded-full border-none font-bold text-[1rem] shadow-[0_8px_30px_rgba(37,211,102,0.4)] transition-all duration-200 hover:translate-y-[-2px] hover:shadow-[0_12px_40px_rgba(37,211,102,0.5)] cursor-pointer"
             >
               <svg viewBox="0 0 24 24" className="w-[20px] h-[20px] fill-white">
                 <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 21.5c-1.864 0-3.605-.561-5.055-1.527l-3.611.968.977-3.638c-1.004-1.454-1.589-3.217-1.589-5.115 0-5.238 4.262-9.5 9.5-9.5s9.5 4.262 9.5 9.5-4.262 9.5-9.5 9.5zm5.139-6.857c-.281-.141-1.664-.821-1.922-.915-.258-.094-.446-.141-.633.141s-.727.915-.891 1.102c-.164.188-.328.211-.609.07-.281-.141-1.186-.437-2.258-1.393-.835-.744-1.399-1.663-1.563-1.945-.164-.281-.017-.433.123-.573.126-.126.281-.328.422-.492.141-.164.188-.281.281-.469.094-.188.047-.352-.023-.492-.07-.141-.633-1.524-.867-2.086-.228-.547-.459-.473-.633-.481-.164-.008-.352-.008-.539-.008s-.492.07-.75.352c-.258.281-.984.961-.984 2.344s1.008 2.719 1.148 2.906c.141.188 1.984 3.028 4.805 4.242.672.289 1.195.461 1.602.59.675.214 1.289.184 1.773.112.54-.08 1.664-.68 1.898-1.336.234-.656.234-1.219.164-1.336-.07-.117-.258-.188-.539-.328z"/>
               </svg>
               Join WhatsApp Affiliate Program
-            </a>
+            </button>
             <p className="text-[var(--gray)] text-[0.9rem] mt-[16px]">
               Start today and turn your WhatsApp into a powerful income channel with FaVi Craze.
             </p>
@@ -568,14 +584,12 @@ export default function Home() {
                 <p className="text-[var(--gray)] mb-[24px] text-[0.95rem] leading-[1.6]">
                   Whether you want to build an online clothing brand or grow your retail store, Favi Craze provides the products, support, and infrastructure to help you succeed.
                 </p>
-                <a 
-                  href="https://wa.me/919321137312?text=Hi!%20I%20want%20to%20become%20a%20Favi%20Craze%20reseller.%20Please%20share%20more%20details." 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-block bg-[var(--pink)] text-white px-[32px] py-[14px] rounded-full no-underline font-semibold text-[0.95rem] shadow-[0_6px_24px_rgba(214,51,132,0.4)] transition-all duration-200 hover:translate-y-[-2px] hover:shadow-[0_8px_30px_rgba(214,51,132,0.5)]"
+                <button
+                  onClick={handleResellerClick}
+                  className="inline-block bg-[var(--pink)] text-white px-[32px] py-[14px] rounded-full border-none font-semibold text-[0.95rem] shadow-[0_6px_24px_rgba(214,51,132,0.4)] transition-all duration-200 hover:translate-y-[-2px] hover:shadow-[0_8px_30px_rgba(214,51,132,0.5)] cursor-pointer"
                 >
                   Apply Now as Reseller →
-                </a>
+                </button>
               </div>
             </div>
 

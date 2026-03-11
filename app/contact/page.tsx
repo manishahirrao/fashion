@@ -24,7 +24,14 @@ export default function Contact() {
       return;
     }
 
-    setToastMessage('🎉 Quote request sent! We\'ll get back to you shortly with pricing details.');
+    // Create WhatsApp message
+    const whatsappMessage = `Hi! I'm ${formData.fname} ${formData.lname}. I'm interested in ${formData.interest || 'your products'}. ${formData.message}. Please contact me at ${formData.email} or ${formData.phone}.`;
+    const whatsappUrl = `https://wa.me/919321137312?text=${encodeURIComponent(whatsappMessage)}`;
+    
+    // Open WhatsApp
+    window.open(whatsappUrl, '_blank');
+    
+    setToastMessage('🎉 WhatsApp opened! Please send your message.');
     setShowToast(true);
     
     setFormData({
@@ -169,6 +176,22 @@ export default function Contact() {
               >
                 Request Quote →
               </button>
+              
+              <div className="mt-[16px] text-center">
+                <p className="text-[0.8rem] text-[var(--gray)] mb-[12px]">
+                  Or contact us directly:
+                </p>
+                <div className="flex gap-[12px] justify-center">
+                  <a 
+                    href="https://wa.me/919321137312" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-[6px] bg-[#25D366] text-white px-[16px] py-[8px] rounded-full text-[0.8rem] font-semibold no-underline transition-all hover:bg-[#20BA5A]"
+                  >
+                    📱 WhatsApp
+                  </a>
+                </div>
+              </div>
             </form>
           </div>
         </div>
