@@ -68,16 +68,16 @@ export default function Home() {
   return (
     <div className="animate-[pageIn_0.4s_ease_forwards]">
       {/* Hero Section */}
-      <section className="min-h-[calc(100vh-64px)] flex flex-col justify-end px-[8vw] py-[60px] relative overflow-hidden text-center bg-cover bg-center bg-no-repeat before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-b before:from-black/30 before:via-black/20 before:to-black/40 before:z-[1]" style={{backgroundImage: 'url("/images/Website%20Banner%20(3).jpg")'}}>
+      <section className="min-h-[calc(100vh-64px)] flex flex-col justify-end px-[8vw] py-[60px] relative overflow-hidden text-center bg-cover bg-center bg-no-repeat before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-b before:from-black/60 before:via-black/50 before:to-black/70 before:z-[1]" style={{backgroundImage: 'url("/images/Website%20Banner%20(3).jpg")'}}>
         <div className="relative z-10 mb-[80px]">
-          <h1 className="font-['Playfair_Display'] text-[clamp(2.5rem,5vw,4rem)] text-white mb-[32px] leading-[1.1] font-bold">
-            Custom Apparel That <em className="text-[var(--pink-light)] italic">Speaks You</em>
+          <h1 className="font-['Playfair_Display'] text-[clamp(2.5rem,5vw,4rem)] text-white mb-[32px] leading-[1.1] font-bold drop-shadow-2xl">
+            Custom Apparel That <em className="text-[var(--pink-light)] italic font-black">Speaks You</em>
           </h1>
           <div className="flex gap-[16px] flex-wrap justify-center">
             <Link href="/products" className="bg-[var(--pink)] text-white px-[32px] py-[14px] rounded-full no-underline font-semibold text-[0.95rem] shadow-[0_6px_24px_rgba(214,51,132,0.4)] transition-all duration-200 hover:translate-y-[-2px] hover:shadow-[0_8px_30px_rgba(214,51,132,0.5)]">
               Explore Products
             </Link>
-            <Link href="/contact" className="bg-transparent text-white px-[32px] py-[14px] rounded-full no-underline font-semibold text-[0.95rem] border-2 border-white transition-all duration-200 hover:bg-white/10">
+            <Link href="/contact" className="bg-transparent text-white px-[32px] py-[14px] rounded-full no-underline font-semibold text-[0.95rem] border-2 border-white transition-all duration-200 hover:bg-white/20 drop-shadow-md">
               Get Free Quote
             </Link>
           </div>
