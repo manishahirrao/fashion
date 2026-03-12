@@ -131,7 +131,7 @@ export default function Navbar() {
               href="/about" 
               className={`block no-underline text-[1rem] font-medium px-[16px] py-[12px] rounded-[12px] transition-all duration-200 ${isActive('/about') ? 'text-[var(--pink)] bg-[var(--pink-pale)]' : 'text-[var(--dark)] hover:bg-[var(--pink-pale)] hover:text-[var(--pink)]'}`}
             >
-              About
+              About Us
             </Link>
           </li>
           <li>
