@@ -127,33 +127,31 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Products Sliding Banner */}
-      <section className="relative h-[500px] overflow-hidden max-md:h-[400px]">
-        <div className="absolute inset-0">
-          <Image 
-            src="/group-tshirt.jpeg" 
-            alt="Favi Craze Custom Products" 
-            fill
-            className="object-cover"
-            priority
-            unoptimized
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
-        </div>
-        <div className="relative z-10 h-full flex items-center px-[8vw]">
-          <div className="max-w-[600px]">
-            <h2 className="font-['Playfair_Display'] text-[clamp(2.5rem,4vw,4rem)] text-white mb-[20px] leading-[1.1]">
+      {/* Products Collection Section */}
+      <section className="relative py-[90px] overflow-hidden bg-gradient-to-br from-[var(--dark)] to-[#2d0a1a]">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(214,51,132,0.15),transparent_70%)]"></div>
+        <div className="relative z-10 px-[8vw]">
+          <div className="max-w-[900px] mx-auto text-center">
+            <div className="inline-flex items-center gap-[8px] bg-[var(--pink)]/20 text-[var(--pink-light)] px-[16px] py-[6px] rounded-full text-[0.75rem] font-bold mb-[24px] tracking-[0.05em] uppercase">
+              <span>✨</span>
+              <span>Our Products</span>
+            </div>
+            <h2 className="font-['Playfair_Display'] text-[clamp(2.5rem,4vw,4.5rem)] text-white mb-[24px] leading-[1.1]">
               Discover Our <em className="text-[var(--pink-light)] italic">Collection</em>
             </h2>
-            <p className="text-white/90 text-[1.1rem] leading-[1.7] mb-[32px]">
-              From trendy t-shirts to corporate gifting solutions — explore our wide range of customizable apparel that brings your vision to life.
+            <p className="text-white/90 text-[1.2rem] leading-[1.8] mb-[50px] max-w-[700px] mx-auto">
+              From trendy t-shirts to corporate gifting solutions — explore our wide range of customizable apparel that brings your vision to life with premium quality and innovative designs.
             </p>
-            <div className="flex gap-[16px] flex-wrap">
-              <Link href="/about" className="bg-white text-[var(--pink)] px-[32px] py-[14px] rounded-full no-underline font-semibold text-[0.95rem] shadow-[0_6px_24px_rgba(255,255,255,0.3)] transition-all duration-200 hover:translate-y-[-2px] hover:shadow-[0_8px_30px_rgba(255,255,255,0.4)]">
-                About Us
+            
+            
+            
+            <div className="flex gap-[16px] flex-wrap justify-center">
+              <Link href="/products" className="bg-[var(--pink)] text-white px-[40px] py-[16px] rounded-full no-underline font-bold text-[1rem] shadow-[0_8px_30px_rgba(214,51,132,0.4)] transition-all duration-200 hover:translate-y-[-2px] hover:shadow-[0_12px_40px_rgba(214,51,132,0.6)] flex items-center gap-[8px]">
+                <span>Explore Products</span>
+                <span>→</span>
               </Link>
-              <Link href="/products" className="bg-[var(--pink)] text-white px-[32px] py-[14px] rounded-full no-underline font-semibold text-[0.95rem] shadow-[0_6px_24px_rgba(214,51,132,0.4)] transition-all duration-200 hover:translate-y-[-2px] hover:shadow-[0_8px_30px_rgba(214,51,132,0.5)]">
-                Product Gallery
+              <Link href="/about" className="bg-white/10 backdrop-blur-sm text-white px-[40px] py-[16px] rounded-full no-underline font-semibold text-[1rem] border border-white/20 transition-all duration-200 hover:bg-white/20 hover:translate-y-[-2px]">
+                About Us
               </Link>
             </div>
           </div>

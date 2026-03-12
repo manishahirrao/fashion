@@ -74,7 +74,7 @@ export default function Contact() {
             <div className="flex flex-col gap-[16px]">
               {[
                 { icon: '📞', label: 'Phone', value: 'Mumbai: 9321137312 / Pune: 8693856086' },
-                { icon: '✉️', label: 'Email', value: 'fashionvista2022@gmail.com' },
+                { icon: '✉️', label: 'Email', value: 'fashionvista2022@gmail.com / favicraze@gmail.com' },
                 { icon: '📸', label: 'Instagram', value: '@fashionvistaoffical' },
                 { icon: '📍', label: 'Address', value: 'Venkatesh Vihar, Khar West, Mumbai, MH 400052' },
               ].map((contact, i) => (
@@ -212,6 +212,7 @@ export default function Contact() {
             { icon: '📘', text: 'Facebook', link: 'https://www.facebook.com/share/1AVrhGRGVw/' },
             { icon: '💼', text: 'LinkedIn', link: 'https://www.linkedin.com/company/favi-craze-offical' },
             { icon: '📧', text: 'fashionvista2022@gmail.com', link: 'mailto:fashionvista2022@gmail.com' },
+            { icon: '📧', text: 'favicraze@gmail.com', link: 'mailto:favicraze@gmail.com' },
             { icon: '📞', text: 'Mumbai: 9321137312', link: 'tel:9321137312' },
             { icon: '📞', text: 'Pune: 8693856086', link: 'tel:8693856086' },
           ].map((social, i) => (

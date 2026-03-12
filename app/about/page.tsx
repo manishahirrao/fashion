@@ -263,7 +263,7 @@ export default function About() {
                     alt="Prathamesh Ranjan Talpade - Founder & Creative Director"
                     width={120}
                     height={120}
-                    className="object-cover w-full h-full "
+                    className="object-cover object-top w-full h-full"
                     unoptimized
                   />
                 </div>
@@ -320,7 +320,7 @@ export default function About() {
                       alt={`${member.name} - ${member.role}`}
                       width={100}
                       height={100}
-                      className="object-cover w-full h-full"
+                      className="object-cover object-top w-full h-full"
                       unoptimized
                     />
                   </div>
