@@ -69,7 +69,7 @@ export default function Navbar() {
               href="/about" 
               className={`no-underline text-[0.9rem] font-medium relative tracking-[0.02em] transition-colors duration-250 after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:bg-[var(--pink)] after:rounded-full after:transition-all after:duration-300 ${isActive('/about') ? 'text-[var(--pink)] after:right-0' : 'text-[var(--dark)] after:right-full hover:text-[var(--pink)] hover:after:right-0'}`}
             >
-              About
+              About Us
             </Link>
           </li>
           <li>

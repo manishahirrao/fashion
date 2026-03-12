@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-type Category = 'all' | 'printed-adults' | 'handpainted' | 'kids' | 'couple' | 'other';
+type Category = 'all' | 'printed-adults' | 'handpainted' | 'round-neck' | 'collar' | 'kids' | 'couple' | 'other';
 
 // Grouped product structure (source data)
 interface GroupedProduct {
@@ -27,11 +27,11 @@ interface IndividualProduct {
 }
 
 const groupedProducts: GroupedProduct[] = [
-  // Round Neck T-shirts (Handpainted)
+  // Round Neck T-shirts
   { 
     name: 'Round Neck T-shirts', 
     desc: 'Classic round neck tees with custom handpainted designs. Premium 180 GSM cotton, XS–7XL.', 
-    category: 'handpainted', 
+    category: 'round-neck', 
     badge: 'Bestseller', 
     images: [
       '/images/round-neck.jpeg',
@@ -39,17 +39,32 @@ const groupedProducts: GroupedProduct[] = [
     ]
   },
   
-  // Collar T-shirts (Handpainted)
+  // Collar T-shirts
   { 
     name: 'Collar T-shirts', 
     desc: 'Professional polo-style collar tees with handpainted designs perfect for corporate wear and casual outings.', 
-    category: 'handpainted', 
+    category: 'collar', 
     badge: 'Popular',
     images: [
       '/images/collar-tshirt (1).jpeg',
       '/images/collar-tshirt (2).jpeg',
       '/images/collar-tshirt (3).jpeg',
       '/images/collar-tshirt (4).jpeg',
+    ]
+  },
+  
+  // Handprinted Apparel
+  { 
+    name: 'Handprinted Apparel', 
+    desc: 'Unique handprinted designs with artistic flair. Each piece is individually crafted with premium quality paints and materials.', 
+    category: 'handpainted', 
+    badge: 'Artistic',
+    images: [
+      '/images/handprinted (1).jpeg',
+      '/images/handprinted (2).jpeg',
+      '/images/handprinted (3).jpeg',
+      '/images/handprinted (4).jpeg',
+      '/images/handprinted (5).jpeg',
     ]
   },
   
@@ -66,12 +81,7 @@ const groupedProducts: GroupedProduct[] = [
       '/images/kids-1 (2).jpeg',
       '/images/kids-2 (1).jpeg',
       '/images/kids-2 (2).jpeg',
-      '/images/kids-3 (1).jpeg',
-      '/images/kids-3 (2).jpeg',
-      '/images/kids-3 (3).jpeg',
-      '/images/kids-3 (4).jpeg',
       '/images/kids-3 (5).jpeg',
-      '/images/kids-4.jpeg',
       '/images/kids-5 (1).jpeg',
       '/images/kids-5 (2).jpeg',
     ]
@@ -171,6 +181,8 @@ export default function Products() {
         <div className="flex gap-[12px] flex-wrap justify-center">
           {[
             { label: 'All Products', value: 'all' as Category },
+            { label: 'Round Neck T-shirts', value: 'round-neck' as Category },
+            { label: 'Collar T-shirts', value: 'collar' as Category },
             { label: 'Handpainted Apparel', value: 'handpainted' as Category },
             { label: 'Kids Wear', value: 'kids' as Category },
             { label: 'Other Products', value: 'other' as Category },

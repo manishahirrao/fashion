@@ -68,7 +68,7 @@ export default function Home() {
   return (
     <div className="animate-[pageIn_0.4s_ease_forwards]">
       {/* Hero Section */}
-      <section className="min-h-[calc(100vh-64px)] grid grid-cols-2 items-center gap-[40px] px-[8vw] py-[60px] relative overflow-hidden max-md:grid-cols-1 max-md:text-center before:content-[''] before:absolute before:top-[-200px] before:right-[-200px] before:w-[700px] before:h-[700px] before:rounded-full before:bg-[radial-gradient(circle,rgba(214,51,132,0.12)_0%,transparent_70%)] before:pointer-events-none after:content-[''] after:absolute after:bottom-[-150px] after:left-[-100px] after:w-[500px] after:h-[500px] after:rounded-full after:bg-[radial-gradient(circle,rgba(244,114,182,0.1)_0%,transparent_70%)] after:pointer-events-none">
+      <section className="min-h-[calc(100vh-64px)] grid grid-cols-2 items-center gap-[40px] px-[8vw] py-[60px] relative overflow-hidden max-md:grid-cols-1 max-md:text-center bg-cover bg-center bg-no-repeat before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/80 before:via-white/60 before:to-white/40 before:z-[1] after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-br after:from-transparent after:via-transparent after:to-[rgba(214,51,132,0.05)] after:z-[2]" style={{backgroundImage: 'url("/images/Website%20Banner%20(3).jpg")'}}>
         <div className="relative z-10">
           <div className="inline-flex items-center gap-[8px] bg-[var(--pink-pale)] text-[var(--pink)] px-[16px] py-[6px] rounded-full text-[0.8rem] font-semibold mb-[20px] tracking-[0.05em] uppercase">
             <span className="w-[8px] h-[8px] bg-[var(--pink)] rounded-full animate-pulse"></span>
@@ -753,7 +753,7 @@ export default function Home() {
               },
               {
                 q: 'How do I place an order?',
-                a: 'Simply click the WhatsApp button on any product page, fill out our quote request form, or call us directly at 9321137312. Share your requirements, design, quantity, and delivery timeline. We\'ll provide a quote and mockup within hours. Once approved, we begin production immediately.'
+                a: 'Simply click the WhatsApp button on any product page, fill out our quote request form, or call us directly at Mumbai: 9321137312 or Pune: 8693856086. Share your requirements, design, quantity, and delivery timeline. We\'ll provide a quote and mockup within hours. Once approved, we begin production immediately.'
               }
             ].map((faq, i) => (
               <details key={i} className="bg-white rounded-[16px] px-[28px] py-[24px] shadow-[0_4px_20px_rgba(214,51,132,0.08)] transition-all hover:shadow-[0_8px_30px_rgba(214,51,132,0.12)] group">

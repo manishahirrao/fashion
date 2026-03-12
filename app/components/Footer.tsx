@@ -45,7 +45,8 @@ export default function Footer() {
           <h4 className="text-white font-bold mb-[16px] text-[0.95rem]">Connect With Us</h4>
           <ul className="list-none flex flex-col gap-[10px]">
             <li><a href="mailto:fashionvista2022@gmail.com" className="text-white/50 no-underline text-[0.875rem] hover:text-[var(--pink-light)] transition-colors">fashionvista2022@gmail.com</a></li>
-            <li><a href="tel:9321137312" className="text-white/50 no-underline text-[0.875rem] hover:text-[var(--pink-light)] transition-colors">9321137312</a></li>
+            <li><a href="tel:9321137312" className="text-white/50 no-underline text-[0.875rem] hover:text-[var(--pink-light)] transition-colors">Mumbai: 9321137312</a></li>
+            <li><a href="tel:8693856086" className="text-white/50 no-underline text-[0.875rem] hover:text-[var(--pink-light)] transition-colors">Pune: 8693856086</a></li>
             <li><span className="text-white/50 text-[0.875rem]">Venkatesh Vihar, Khar West</span></li>
             <li><span className="text-white/50 text-[0.875rem]">Mumbai, Maharashtra 400052</span></li>
           </ul>
