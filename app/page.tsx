@@ -68,19 +68,19 @@ export default function Home() {
   return (
     <div className="animate-[pageIn_0.4s_ease_forwards]">
       {/* Hero Section */}
-      <section className="min-h-[calc(100vh-64px)] grid grid-cols-2 items-center gap-[40px] px-[8vw] py-[60px] relative overflow-hidden max-md:grid-cols-1 max-md:text-center bg-cover bg-center bg-no-repeat before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/80 before:via-white/60 before:to-white/40 before:z-[1] after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-br after:from-transparent after:via-transparent after:to-[rgba(214,51,132,0.05)] after:z-[2]" style={{backgroundImage: 'url("/images/Website%20Banner%20(3).jpg")'}}>
-        <div className="relative z-10">
+      <section className="min-h-[calc(100vh-64px)] flex items-center justify-center px-[8vw] py-[60px] relative overflow-hidden text-center bg-cover bg-center bg-no-repeat before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-b before:from-black/30 before:via-black/20 before:to-black/40 before:z-[1]" style={{backgroundImage: 'url("/images/Website%20Banner%20(3).jpg")'}}>
+        <div className="relative z-10 max-w-[800px] mx-auto">
           <div className="inline-flex items-center gap-[8px] bg-[var(--pink-pale)] text-[var(--pink)] px-[16px] py-[6px] rounded-full text-[0.8rem] font-semibold mb-[20px] tracking-[0.05em] uppercase">
             <span className="w-[8px] h-[8px] bg-[var(--pink)] rounded-full animate-pulse"></span>
             Award-Winning Custom Apparel Brand
           </div>
-          <h1 className="font-['Playfair_Display'] text-[clamp(2.2rem,4.5vw,3.8rem)] leading-[1.1] text-[var(--dark)] mb-[20px]">
-            Turn Your <em className="text-[var(--pink)] italic">Ideas</em> Into<br/>Wearable <em className="text-[var(--pink)] italic">Masterpieces</em>
+          <h1 className="font-['Playfair_Display'] text-[clamp(2.2rem,4.5vw,3.8rem)] leading-[1.1] text-white mb-[20px]">
+            Turn Your <em className="text-[var(--pink-light)] italic">Ideas</em> Into<br/>Wearable <em className="text-[var(--pink-light)] italic">Masterpieces</em>
           </h1>
-          <p className="text-[1.1rem] text-[var(--gray)] leading-[1.7] max-w-[460px] mb-[36px] max-md:mx-auto">
+          <p className="text-[1.1rem] text-white/90 leading-[1.7] max-w-[600px] mx-auto mb-[36px]">
             From a single tee to bulk orders — we bring your designs to life with premium fabrics, vibrant prints, and zero minimum order. Express yourself, your brand, your way.
           </p>
-          <div className="flex gap-[16px] flex-wrap max-md:justify-center">
+          <div className="flex gap-[16px] flex-wrap justify-center mb-[48px]">
             <Link href="/products" className="bg-[var(--pink)] text-white px-[32px] py-[14px] rounded-full no-underline font-semibold text-[0.95rem] shadow-[0_6px_24px_rgba(214,51,132,0.4)] transition-all duration-200 hover:translate-y-[-2px] hover:shadow-[0_8px_30px_rgba(214,51,132,0.5)]">
               Explore Products
             </Link>
@@ -88,44 +88,22 @@ export default function Home() {
               Get Free Quote
             </Link>
           </div>
-          <div className="flex gap-[32px] mt-[48px] pt-[32px] border-t border-[rgba(214,51,132,0.15)] max-md:justify-center">
-            <div className="text-left">
-              <div className="font-['Playfair_Display'] text-[2rem] font-black text-[var(--pink)] leading-none">13K+</div>
-              <div className="text-[0.8rem] text-[var(--gray)] mt-[4px]">Happy Customers</div>
+          <div className="flex gap-[32px] justify-center pt-[32px] border-t border-white/30">
+            <div className="text-center">
+              <div className="font-['Playfair_Display'] text-[2rem] font-black text-[var(--pink-light)] leading-none">13K+</div>
+              <div className="text-[0.8rem] text-white/80 mt-[4px]">Happy Customers</div>
             </div>
-            <div className="text-left">
-              <div className="font-['Playfair_Display'] text-[2rem] font-black text-[var(--pink)] leading-none">3</div>
-              <div className="text-[0.8rem] text-[var(--gray)] mt-[4px]">Resellers</div>
+            <div className="text-center">
+              <div className="font-['Playfair_Display'] text-[2rem] font-black text-[var(--pink-light)] leading-none">3</div>
+              <div className="text-[0.8rem] text-white/80 mt-[4px]">Resellers</div>
             </div>
-            <div className="text-left">
-              <div className="font-['Playfair_Display'] text-[2rem] font-black text-[var(--pink)] leading-none">50+</div>
-              <div className="text-[0.8rem] text-[var(--gray)] mt-[4px]">Exhibitions</div>
+            <div className="text-center">
+              <div className="font-['Playfair_Display'] text-[2rem] font-black text-[var(--pink-light)] leading-none">50+</div>
+              <div className="text-[0.8rem] text-white/80 mt-[4px]">Exhibitions</div>
             </div>
-            <div className="text-left">
-              <div className="font-['Playfair_Display'] text-[2rem] font-black text-[var(--pink)] leading-none">XS-7XL</div>
-              <div className="text-[0.8rem] text-[var(--gray)] mt-[4px]">All Sizes</div>
-            </div>
-          </div>
-        </div>
-
-        <div className="relative z-10 flex justify-center max-md:hidden">
-          <div className="relative w-[420px] h-[420px] rounded-[24px] overflow-hidden shadow-[0_20px_60px_rgba(214,51,132,0.25)]">
-            <Image 
-              src="/home-hero.jpeg" 
-              alt="Favi Craze Custom Apparel" 
-              fill
-              className="object-cover"
-              priority
-              unoptimized
-            />
-            <div className="absolute top-[20px] right-[20px] bg-white rounded-[12px] px-[16px] py-[10px] shadow-[0_8px_40px_rgba(214,51,132,0.12)] text-[0.8rem] font-semibold text-[var(--dark)] animate-[floatY_3s_ease-in-out_infinite]">
-              🏆 Award Winning
-            </div>
-            <div className="absolute bottom-[80px] left-[20px] bg-white rounded-[12px] px-[16px] py-[10px] shadow-[0_8px_40px_rgba(214,51,132,0.12)] text-[0.8rem] font-semibold text-[var(--dark)] animate-[floatY_3s_ease-in-out_infinite] [animation-delay:1s]">
-              ✨ No MOQ
-            </div>
-            <div className="absolute top-[160px] left-[20px] bg-white rounded-[12px] px-[16px] py-[10px] shadow-[0_8px_40px_rgba(214,51,132,0.12)] text-[0.8rem] font-semibold text-[var(--dark)] animate-[floatY_3s_ease-in-out_infinite] [animation-delay:2s]">
-              🇮🇳 Made in India
+            <div className="text-center">
+              <div className="font-['Playfair_Display'] text-[2rem] font-black text-[var(--pink-light)] leading-none">XS-7XL</div>
+              <div className="text-[0.8rem] text-white/80 mt-[4px]">All Sizes</div>
             </div>
           </div>
         </div>
