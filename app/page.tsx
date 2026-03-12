@@ -68,8 +68,8 @@ export default function Home() {
   return (
     <div className="animate-[pageIn_0.4s_ease_forwards]">
       {/* Hero Section */}
-      <section className="min-h-[calc(100vh-64px)] flex flex-col justify-end px-[8vw] py-[60px] relative overflow-hidden text-center bg-cover bg-center bg-no-repeat before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-b before:from-black/60 before:via-black/50 before:to-black/70 before:z-[1]" style={{backgroundImage: 'url("/images/Website%20Banner%20(3).jpg")'}}>
-        <div className="relative z-10 mb-[80px]">
+      <section className="min-h-[calc(100vh-64px)] flex flex-col justify-end px-[8vw] pb-[40px] pt-[60px] relative overflow-hidden text-center bg-cover bg-center bg-no-repeat before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-b before:from-black/60 before:via-black/50 before:to-black/70 before:z-[1]" style={{backgroundImage: 'url("/images/Website%20Banner%20(3).jpg")'}}>
+        <div className="relative z-10">
           <h1 className="font-['Playfair_Display'] text-[clamp(2.5rem,5vw,4rem)] text-white mb-[32px] leading-[1.1] font-bold drop-shadow-2xl">
             Custom Apparel That <em className="text-[var(--pink-light)] italic font-black">Speaks You</em>
           </h1>
